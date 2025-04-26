@@ -1,0 +1,70 @@
+.counters {
+  background-color: $selago;
+  padding: 80px 0 80px 0;
+
+  h2 {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    color: $darkGrey;
+  }
+
+  .counter-id-0 {
+    color: #75ADE5;
+  }
+
+  .counter-id-1 {
+    color: #24C875;
+
+  }
+
+  .counter-id-2 {
+    color: #EB5858;
+  }
+
+  .counter-id-3 {
+    color: #FFD259;
+  }
+
+  .counter-id-4 {
+    color: #003260;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    background: $white;
+    box-shadow: 0 20px 30px rgba(43, 43, 43, 0.1);
+    border-radius: 8px;
+    padding: 24px 18px;
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 34px;
+    @include media768{
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    &-item {
+      width: 20%;
+
+      @include media768 {
+        width: 100%;
+      }
+
+      p {
+        font-weight: $fontWeightRegular;
+        font-size: $fontSizeSmall;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: .2px;
+        color: $darkGrey;
+        max-width: 152px;
+        width: 100%;
+        margin: 8px auto;
+      }
+    }
+  }
+}

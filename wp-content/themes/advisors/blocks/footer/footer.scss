@@ -1,0 +1,113 @@
+.footer {
+  padding: 35px 0;
+  background: $black;
+  color: $white;
+  @include media768{
+    padding: 0;
+  }
+
+  &__main{
+    &-text{
+      font-weight: 600;
+      font-size: 22px;
+      margin-bottom: 25px;
+      color: #FCFCFC;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+    padding: 0 120px;
+
+    @include media992 {
+      justify-content: center;
+      padding: 40px 0;
+    }
+  }
+
+  &__copyright {
+    color: #00C7FF;
+    font-size: 16px;
+    text-align: right;
+    @include media992 {
+      text-align: center;
+      max-width: 260px;
+      padding-top: 40px;
+    }
+
+    a {
+      font-size: 16px;
+      color: #00C7FF;
+      text-decoration: none;
+      font-weight: 500;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    font-weight: $fontWeightBold;
+    font-size: $fontSizeLarge;
+    @include media768 {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    ul {
+      padding-left: 0px;
+      @include media992 {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+
+        &.open {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    li {
+      list-style: none;
+      font-weight: $fontWeightBold;
+      font-size: 15px;
+      line-height: 1.42857143;
+      margin: 6px 0;
+
+      a {
+        list-style: none;
+        font-weight: $fontWeightRegular;
+        font-size: 15px;
+        line-height: 1.42857143;
+        color: $footerColor;
+        text-decoration: none;
+      }
+    }
+
+    &-left, &-center, &-right {
+      width: 33%;
+      @include media992 {
+        width: 100%;
+        padding-bottom: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .title {
+          background: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.70001 5.28944L7.69998 2.38944C8.09998 1.98944 8.09998 1.38945 7.69998 0.989453C7.29998 0.589453 6.69999 0.589453 6.29999 0.989453L4 3.18943L1.70001 0.989453C1.30001 0.589453 0.699992 0.589453 0.299992 0.989453C0.099988 1.18945 0 1.38943 0 1.68943C0 1.88943 0.099988 2.18944 0.299992 2.38944L3.29999 5.28944C3.69999 5.58944 4.30001 5.58944 4.70001 5.28944Z' fill='%232B2B2B'/%3E%3C/svg%3E%0A") no-repeat 100% 50%;
+          padding-right: 16px;
+          width: fit-content;
+          margin: 0 auto;
+        }
+      }
+    }
+
+  }
+}

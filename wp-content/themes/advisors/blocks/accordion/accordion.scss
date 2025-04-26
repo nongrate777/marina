@@ -1,0 +1,93 @@
+.accordion {
+  padding: 100px 0 0;
+  position: relative;
+  z-index: 10;
+  background: url("data:image/svg+xml,%3Csvg width='700' height='600' viewBox='0 0 919 808' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M768.334 651.965L897.207 995.517C934.339 1094.51 922.221 1183.74 857.45 1262.84C700.748 1452.8 541.737 1645.3 385.035 1835.26C315.981 1915.97 229.999 1951.54 122.386 1933.79C-120.596 1893.75 -365.886 1856.24 -608.867 1816.2C-706.824 1798.15 -779.595 1747.4 -815.09 1652.78C-907.5 1415.11 -996.385 1169.47 -1086.49 929.279C-1123.62 830.289 -1094.5 742.978 -1029.73 663.883C-877.641 478.969 -720.182 295.36 -572.045 108.606C-498.584 17.948 -401.307 -13.5606 -291.174 6.56746C-56.4221 46.3716 175.81 83.7998 408.924 119.237C523.886 139.214 601.361 198.162 637.698 312.395C679.2 423.03 725.194 536.962 768.334 651.965Z' fill='%23F3F8FD'/%3E%3C/svg%3E%0A") no-repeat bottom left;
+  @include media768 {
+    background-size: contain;
+  }
+
+  &__inner {
+    background: url("data:image/svg+xml,%3Csvg width='476' height='521' viewBox='0 0 476 521' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M522.06 133.182L548.361 203.296C555.939 223.499 553.466 241.71 540.247 257.853C508.266 296.622 475.814 335.907 443.834 374.677C429.741 391.147 412.193 398.407 390.231 394.784C340.642 386.613 290.582 378.957 240.993 370.786C221.001 367.102 206.149 356.745 198.906 337.434C180.046 288.929 161.906 238.798 143.517 189.778C135.939 169.576 141.883 151.757 155.101 135.614C186.14 97.8762 218.275 60.4043 248.508 22.2904C263.5 3.78842 283.353 -2.64203 305.829 1.46581C353.739 9.58925 401.134 17.2278 448.709 24.46C472.171 28.5371 487.983 40.5675 495.399 63.8809C503.869 86.46 513.255 109.712 522.06 133.182Z' fill='%23F3F8FD'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M198.931 467.611L211.272 500.511C214.828 509.99 213.667 518.535 207.465 526.11C192.459 544.301 177.231 562.735 162.225 580.927C155.612 588.655 147.378 592.062 137.073 590.362C113.805 586.528 90.315 582.935 67.0465 579.101C57.6659 577.372 50.6972 572.513 47.2981 563.451C38.4486 540.692 29.9368 517.169 21.3084 494.167C17.7525 484.688 20.5414 476.327 26.7441 468.752C41.308 451.045 56.3867 433.462 70.5727 415.578C77.6075 406.896 86.9229 403.879 97.4696 405.806C119.95 409.618 142.189 413.202 164.513 416.596C175.522 418.509 182.941 424.154 186.421 435.093C190.395 445.688 194.8 456.598 198.931 467.611Z' stroke='%23E8F1FB'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M197.553 467.709L209.662 499.992C213.152 509.293 212.013 517.679 205.927 525.111C191.202 542.962 176.26 561.05 161.535 578.9C155.046 586.484 146.967 589.827 136.855 588.158C114.023 584.396 90.9733 580.871 68.1411 577.109C58.9363 575.413 52.0982 570.644 48.7629 561.752C40.0794 539.419 31.7271 516.338 23.2605 493.768C19.7712 484.466 22.5079 476.261 28.5942 468.829C42.8851 451.453 57.6811 434.2 71.6011 416.651C78.504 408.132 87.6448 405.172 97.9937 407.063C120.053 410.803 141.875 414.32 163.78 417.65C174.583 419.527 181.863 425.067 185.277 435.801C189.177 446.197 193.499 456.903 197.553 467.709Z' fill='%23F3F8FD'/%3E%3C/svg%3E%0A") no-repeat bottom right;
+    @include media768 {
+      background-size: contain;
+    }
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 68px 0;
+
+
+    @include media768 {
+      padding: 15px;
+    }
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 45px;
+    color: $darkGrey;
+    text-align: center;
+  }
+
+  a {
+    color: rgb(28, 110, 177);
+    text-decoration: none;
+  }
+
+  @include media576 {
+    padding: 50px 0 20px;
+  }
+
+  &__faq {
+    font-weight: $fontWeightBold;
+    font-size: $fontSizeMedium;
+    line-height: 22px;
+    margin: 0 0 17px;
+    padding: 0 0 17px;
+    border-bottom: 1px solid #E0E7EF;
+  }
+
+  &__question {
+
+    font-weight: $fontWeightBold;
+    position: relative;
+    cursor: pointer;
+    @include media768 {
+      padding-right: 44px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 20px;
+      height: 100%;
+      width: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 15.323L11.933 8.67773L19 15.323' stroke='%2324C875' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: .3s;
+      transform: rotate(180deg);
+    }
+
+    &_active {
+      &:after {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &__answer {
+    padding: 15px 20px;
+    display: none;
+    font-weight: $fontWeightRegular;
+    font-size: $fontSizeMedium;
+    line-height: 22px;
+    letter-spacing: .2px;
+    color: $darkGrey;
+  }
+
+}

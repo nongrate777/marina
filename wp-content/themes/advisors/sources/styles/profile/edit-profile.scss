@@ -1,0 +1,41 @@
+.edit-profile {
+  padding: 70px 0 90px;
+
+  .container {
+    max-width: 555px;
+    margin: 0 auto;
+  }
+
+  &__main {
+
+    h1 {
+      text-align: center;
+      font-size: 44px;
+      font-weight: 900;
+    }
+
+    &-inner {
+      background-color: rgb(250, 250, 250);
+      border: 1px solid #CCCCCC;
+      color: rgb(41, 41, 41);
+      padding: 20px;
+      filter: drop-shadow(0px 8px 26px rgba(43, 43, 43, 0.08));
+      border-radius: 14px;
+    }
+
+    &-item {
+      input {
+        width: 100%;
+      }
+    }
+    .notice-warning{
+      padding-bottom: 24px;
+      color: #950202;
+      font-size: $fontSizeLarge;
+      a{
+        text-decoration: none;
+        font-weight: $fontWeightMedium;
+      }
+    }
+  }
+}

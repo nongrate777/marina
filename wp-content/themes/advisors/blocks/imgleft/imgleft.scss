@@ -1,0 +1,104 @@
+.imgleft {
+  color: $white;
+  background: #24C875;
+  padding: 0;
+
+  .container {
+    @include media768 {
+      padding: 0 30px;
+    }
+  }
+
+  &::after {
+    height: 140px;
+    width: 100%;
+    content: "";
+    display: block;
+    background: url("data:image/svg+xml,%3Csvg width='1366' height='140' viewBox='0 0 1366 140' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_37184_47170)'%3E%3Crect width='1366' height='140' transform='translate(1366 140) rotate(-180)' fill='%23F3F8FD'/%3E%3Cmask id='mask0_37184_47170' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='1366' height='140'%3E%3Crect x='1366' y='140' width='1366' height='140' transform='rotate(-180 1366 140)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_37184_47170)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-675.637 -547.142L-962.79 -1018.86C-1045.53 -1154.78 -1052.7 -1290.12 -979.174 -1425.29C-800.893 -1750.23 -619.908 -2079.56 -441.628 -2404.51C-362.219 -2543.25 -245.09 -2620.03 -80.9823 -2624.05C289.545 -2633.19 662.776 -2646.71 1033.3 -2655.84C1183.22 -2656.7 1305.09 -2602.13 1384.17 -2472.21C1587.64 -2146.79 1788.14 -1808.61 1988.9 -1478.81C2071.64 -1342.89 2053.13 -1205.6 1979.6 -1070.44C1806.73 -754.265 1625.54 -438.508 1459.02 -120.72C1375.89 33.9819 1240.92 107.927 1072.42 109.14C714.124 116.308 360.224 126.281 5.58024 139.445C-170.018 142.239 -301.147 76.8702 -386.997 -81.8096C-479.47 -233.718 -579.513 -389.237 -675.637 -547.142Z' fill='%2324C875'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_37184_47170'%3E%3Crect width='1366' height='140' fill='white' transform='translate(1366 140) rotate(-180)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat top right;
+    @include media768 {
+      height: 38px;
+      background: url("data:image/svg+xml,%3Csvg width='375' height='39' viewBox='0 0 375 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_41885_17960)'%3E%3Crect width='375' height='38.4334' transform='translate(375 38.4336) rotate(-180)' fill='%23F3F8FD'/%3E%3Cmask id='mask0_41885_17960' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='-991' y='-102' width='1366' height='141'%3E%3Crect x='375' y='38.4336' width='1366' height='140' transform='rotate(-180 375 38.4336)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_41885_17960)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-185.479 -150.203L-264.309 -279.701C-287.023 -317.013 -288.992 -354.169 -268.807 -391.275C-219.865 -480.48 -170.18 -570.89 -121.238 -660.095C-99.4379 -698.184 -67.2833 -719.262 -22.2317 -720.364C79.487 -722.873 181.948 -726.585 283.667 -729.093C324.822 -729.328 358.277 -714.347 379.989 -678.681C435.846 -589.346 490.886 -496.506 546.001 -405.968C568.715 -368.655 563.633 -330.967 543.448 -293.862C495.99 -207.064 446.249 -120.381 400.535 -33.1403C377.715 9.32923 340.662 29.6289 294.404 29.9619C196.044 31.9297 98.89 34.6675 1.53181 38.2815C-46.6742 39.0485 -82.6722 21.1031 -106.24 -22.4584C-131.626 -64.1609 -159.09 -106.855 -185.479 -150.203Z' fill='%2324C875'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_41885_17960'%3E%3Crect width='375' height='38.4334' fill='white' transform='translate(375 38.4336) rotate(-180)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat top right;
+    }
+  }
+
+  &::before {
+    background: url("data:image/svg+xml,%3Csvg width='1366' height='140' viewBox='0 0 1366 140' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_37184_47169)'%3E%3Crect width='1366' height='140' fill='%231976D3'/%3E%3Cmask id='mask0_37184_47169' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='1366' height='140'%3E%3Crect width='1366' height='140' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_37184_47169)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2041.64 687.141L2328.79 1158.86C2411.53 1294.78 2418.7 1430.12 2345.17 1565.28C2166.89 1890.23 1985.91 2219.56 1807.63 2544.51C1728.22 2683.25 1611.09 2760.03 1446.98 2764.05C1076.46 2773.19 703.224 2786.71 332.697 2795.84C182.783 2796.7 60.9145 2742.13 -18.1744 2612.21C-221.642 2286.79 -422.136 1948.61 -622.9 1618.81C-705.639 1482.89 -687.128 1345.6 -613.599 1210.44C-440.725 894.265 -259.537 578.507 -93.0169 260.72C-9.89152 106.018 125.081 32.0732 293.582 30.86C651.876 23.6918 1005.78 13.7192 1360.42 0.554458C1536.02 -2.23935 1667.15 63.1296 1753 221.809C1845.47 373.718 1945.51 529.236 2041.64 687.141Z' fill='%2324C875'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_37184_47169'%3E%3Crect width='1366' height='140' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat top left;
+    height: 140px;
+    width: 100%;
+    content: "";
+    display: block;
+    @include media768 {
+      height: 38px;
+      background: url("data:image/svg+xml,%3Csvg width='375' height='39' viewBox='0 0 375 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_41885_17959)'%3E%3Crect width='375' height='38.4334' fill='%231976D3'/%3E%3Cmask id='mask0_41885_17959' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='1366' height='140'%3E%3Crect width='1366' height='140' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_41885_17959)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M560.479 188.637L639.309 318.134C662.023 355.447 663.992 392.603 643.807 429.709C594.865 518.914 545.18 609.324 496.238 698.529C474.438 736.617 442.283 757.695 397.232 758.798C295.513 761.306 193.052 765.018 91.3335 767.527C50.1783 767.762 16.7226 752.781 -4.9892 717.114C-60.8459 627.78 -115.886 534.94 -171.001 444.402C-193.715 407.089 -188.633 369.401 -168.448 332.295C-120.99 245.498 -71.2492 158.814 -25.5352 71.5741C-2.71531 29.1046 34.3378 8.80496 80.5956 8.47192C178.956 6.50407 276.11 3.76633 373.468 0.152322C421.674 -0.614673 457.672 17.3307 481.24 60.8921C506.626 102.595 534.09 145.288 560.479 188.637Z' fill='%2324C875'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_41885_17959'%3E%3Crect width='375' height='38.4334' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat top left;
+    }
+  }
+
+  h2 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 45px;
+    margin-bottom: 28px;
+    text-align: left;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    img {
+      background: $white;
+      //box-shadow: 0px 20px 30px rgba(43, 43, 43, 0.1);
+      padding: 25px;
+      border-radius: 8px;
+    }
+
+    &-left {
+      width: 441px;
+      padding-top: 32px;
+
+      ul {
+        margin: 0 0 0 -16px;
+
+        li {
+          list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_37184_47148)'%3E%3Cpath d='M8 0C3.60594 0 0 3.60594 0 8C0 12.3941 3.60594 16 8 16C12.3941 16 16 12.3941 16 8C16 3.60594 12.3941 0 8 0ZM8.08676 10.6797C7.4962 11.2166 6.58808 11.195 6.02372 10.6306L4.19141 8.79834C3.82533 8.43227 3.82533 7.83873 4.19141 7.47265C4.55749 7.10658 5.15101 7.10658 5.51709 7.47265L6.78169 8.73726C6.95607 8.91164 7.23667 8.91832 7.41915 8.75243L10.8945 5.59319C11.2775 5.24498 11.8703 5.27313 12.2186 5.65608C12.567 6.03917 12.5389 6.63222 12.1557 6.98057L8.08676 10.6797Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_37184_47148'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+          font-size: $fontSizeMedium;
+          padding-bottom: 16px;
+        }
+      }
+
+      @include media768 {
+        width: 100%;
+        padding-top: 5px;
+      }
+    }
+
+    &-right {
+      width: 614px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 50px;
+      @include media576 {
+        width: 100%;
+        padding-left: 0;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0 16px;
+
+        li {
+          list-style-image: none;
+          line-height: 1.42857143;
+          font-size: $fontSizeMedium;
+
+          &::marker {
+            color: $denim;
+          }
+        }
+      }
+    }
+  }
+}

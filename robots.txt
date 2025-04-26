@@ -1,0 +1,47 @@
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: *
+Disallow: *?category=
+
+Disallow: /wp-admin/
+Disallow: /wp-json/
+Disallow: */page/
+Disallow: /readme.html
+Disallow: /cgi-bin
+Disallow: /wp-
+Disallow: /wp/
+Disallow: /?
+Disallow: *?s=
+Disallow: *&s=
+
+Disallow: /search/
+Disallow: /author/
+Disallow: /users/
+
+Disallow: /*?tags=
+Disallow: /*?item_type=
+
+Disallow: */trackback
+Disallow: */feed
+Disallow: */rss
+Disallow: */embed
+Disallow: */tag
+
+Disallow: *utm*=
+Disallow: *openstat=
+Disallow: */?s=*
+
+Allow: */uploads
+Allow: /wp-admin/admin-ajax.php
+Allow: */wp-*/*.js
+Allow: */wp-*/*.css
+Allow: */wp-*/*.png
+Allow: */wp-*/*.jpg
+Allow: */wp-*/*.jpeg
+Allow: */wp-*/*.gif
+Allow: */wp-*/*.svg
+Allow: */wp-*/*.webp
+Allow: */wp-*/*.swf
+Allow: */wp-*/*.pdf
+

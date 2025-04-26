@@ -1,0 +1,110 @@
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+<Files wp-config.php>
+	Order allow,deny
+	Deny from all
+	Satisfy all
+</Files>
+
+<Files install.php>
+	Order allow,deny
+	Deny from all
+	Satisfy all
+</Files>
+
+<Files ~ “^.*\.([Hh][Tt][Aa])”>
+	Order allow,deny
+	Deny from all
+	Satisfy all
+</Files>
+
+<Files ~ “\.(txt|html|md|xml)$”>
+	Order allow,deny
+	Deny from all
+	Satisfy all
+</Files>
+
+<FilesMatch "load-scripts\.php|load-styles\.php">
+  Order allow,deny
+  Deny from all
+  Satisfy all
+</FilesMatch>
+
+<Files wp-links-opml.php>
+	Order allow,deny
+	Deny from all
+	Satisfy all
+</Files>
+
+<Files wp-cron.php>
+	Order allow,deny
+	Deny from all
+	Satisfy all
+</Files>
+
+<Files wp-signup.php>
+	Order allow,deny
+	Deny from all
+	Satisfy all
+</Files>
+
+<Files wp-emoji-loader.min.js>
+	Order allow,deny
+	Deny from all
+	Satisfy all
+</Files>
+
+<FilesMatch "\.(json|gitignore|ini|gitlab-ci.yml|dockerignore|sh)$">
+	Order Allow,Deny
+	Deny from all
+</FilesMatch>
+
+<Files "Dockerfile">
+	Order Allow,Deny
+	Deny from all
+</Files>
+
+<Files xmlrpc.php>
+	order deny,allow
+	deny from all
+
+	Allow from 122.248.245.244/32
+	Allow from 54.217.201.243/32
+	Allow from 54.232.116.4/32
+	Allow from 192.0.80.0/20
+	Allow from 192.0.96.0/20
+	Allow from 192.0.112.0/20
+	Allow from 195.234.108.0/22
+</Files>
+
+<Files server-status>
+SetHandler server-status
+# Use "Require ip" lines to restrict access from only certain IP addresses.
+Require ip 127.0.0.1
+# Require ip 1.2.3.4
+</Files>
+
+# php_value max_input_vars 3500
+
+<Files "block-access.php">
+    <IfModule mod_php7.c>
+        AddType application/x-httpd-php .php
+        php_flag engine on
+    </IfModule>
+</Files>
+Redirect 301 /wp-admin/upgrade.php /404
+Redirect 301 /wp-admin/install.php /404

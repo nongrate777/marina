@@ -1,0 +1,29 @@
+@import "styles";
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 13px;
+}
+
+html :where(.wp-block) {
+    max-width: none;
+}
+
+b, strong {
+    font-weight: $fontWeightSemibold;
+}
+
+.interface-complementary-area {
+    @media (min-width: 1200px) {
+        width: 400px;
+    }
+
+    @media (min-width: 1400px) {
+        width: 480px;
+    }
+}
+
+.wpmdb .header {
+    position: relative;
+}
+.admin-bar .app-header{top:32px}

@@ -1,0 +1,446 @@
+/**
+ * Component: Cookies
+ */
+
+.cookie-banner {
+  background-color: $white;
+  box-shadow: 0 20px 30px rgba(43, 43, 43, 0.1);
+  border-radius: 8px;
+  bottom: 10px;
+  color: #0F172A;
+  max-width: 497px;
+  padding: 35px 40px;
+  position: fixed;
+  right: 10px;
+  visibility: visible;
+  width: 100%;
+  z-index: 9;
+
+  &__headline {
+    margin-right: auto;
+    h3{
+      margin-top: 0;
+    }
+  }
+
+  &__headline * {
+    color: $darkGrey;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.2
+  }
+
+  &__info * {
+    font-size: 15px;
+    line-height: 1.3;
+    a{
+      color: #1976D3;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+
+  &__action .btn {
+    font-size: 16px;
+    height: 48px;
+    width: 100%;
+    min-width: auto;
+    padding: 0 24px;
+    transition: 0.3s;
+    background-color: #1976d3;
+    border: 1px solid #1976d3;
+    color: #ffffff;
+    max-width: -moz-max-content;
+    max-width: -webkit-max-content;
+    max-width: max-content;
+    border-radius: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    min-height: 48px;
+    line-height: 17px;
+    font-weight: 600;
+    white-space: normal;
+    text-align: center;
+    text-decoration: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    margin-right: auto;
+
+    &:hover {
+      background-color: $congressBlue;
+      border-color: $congressBlue;
+    }
+  }
+
+  &__head {
+    align-items: flex-start;
+    display: flex;
+    color: $darkGrey;
+  }
+
+  &__brandmark {
+    height: 24px;
+    position: relative;
+    width: 82px
+  }
+
+  &__brandmark * {
+    height: 100%;
+    left: 0;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    width: 100%
+  }
+
+  &__content {
+    align-items: flex-start;
+    display: flex;
+    margin-bottom: 35px;
+    color: $darkGrey;
+    line-height: 1.2;
+  }
+
+  &__close {
+    border: none;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin-left: 8px;
+    background: transparent url("../images/close-blue.svg");
+    cursor: pointer;
+  }
+
+  &__action {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+    justify-content: space-between;
+  }
+
+  &__button {
+    padding-left: 7px;
+    padding-right: 7px;
+    cursor: pointer;
+  }
+
+  &.cookie-banner_closed {
+    display: none
+  }
+}
+
+.icon-close-blue {
+  background-image: url("../images/close-blue.svg")
+}
+
+.cookie-manage {
+  &-content {
+    margin-top: 19px;
+    max-width: 544px;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%
+  }
+
+  &-label:not(:first-child) {
+    margin-top: 17px
+  }
+
+  &-label {
+    max-width: 100%;
+    width: 100%
+  }
+
+  &-label__field {
+    display: flex;
+    flex-wrap: wrap
+  }
+
+  &__field-label {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%
+  }
+
+  &__field-chekbox {
+    margin-right: 8px;
+    max-width: 32px;
+    width: 100%
+  }
+
+  &__field-description {
+    margin-top: 17px
+  }
+
+  &-banner {
+    &__action {
+      margin-top: 19px
+    }
+
+    &__action .cookie-banner__button {
+      max-width: max-content
+    }
+
+    &__action .cookie-banner__button.cookie-banner__button-back {
+      margin-left: auto
+    }
+  }
+
+  &__field-label * {
+    color: #0F172A;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1
+  }
+
+  &__field-description * {
+    color: #0F172A;
+    font-size: 14px;;
+    line-height: 1
+  }
+}
+
+@media (min-width: 567px) {
+  .cookie-banner.cookie-view-large {
+    max-width: 615px
+  }
+}
+
+@media (max-width: 567px) {
+  .taxdome-modal_cookie-description * {
+    font-size: 14px;
+    line-height: 1
+  }
+  .cookie-manage-content {
+    max-width: 100%
+  }
+  .cookie-banner {
+    max-width: calc(100% - 20px);
+    padding: 12px 20px 20px
+  }
+  .cookie-banner__agree {
+    min-height: 48px
+  }
+  .cookie-banner__button,
+  .cookie-manage-banner__action .cookie-banner__button {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 16px
+  }
+  .cookie-banner__action .cookie-banner__button:last-child {
+    flex: 0 0 100%;
+    max-width: 100%
+  }
+  .cookie-banner__content {
+    margin-bottom: 19px
+  }
+  #cookieModal .taxdome-modal_block {
+    padding: 12px 20px 22px
+  }
+  .cookie-banner.cookie-view-large .cookie-banner__action .cookie-banner__button {
+    flex: 0 0 100%;
+    max-width: 100%
+  }
+}
+
+#cookieModal .taxdome-modal_block {
+  max-width: 624px
+}
+
+.taxdome-modal {
+  backdrop-filter: blur(16px);
+  background: rgba(0, 50, 96, .85);
+  bottom: 0;
+  display: flex;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  transform: scale(0);
+  top: 0;
+  visibility: visible;
+  z-index: 10
+}
+
+.taxdome-modal.is-visible {
+  display: flex
+}
+
+.taxdome-modal__overlay {
+  color: rgba(0, 50, 96, .85);
+  margin: auto;
+  padding: 50px 15px;
+  position: relative
+}
+
+.taxdome-modal_block {
+  background: $white;
+  border-radius: 8px;
+  box-shadow: 0 20px 30px rgba(43, 43, 43, 0.10);
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: hidden;
+  padding: 42px
+}
+
+.taxdome-modal_headline {
+  align-items: baseline;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 12px
+}
+
+.taxdome-modal_title * {
+  color: $darkGrey;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0
+}
+
+.taxdome-modal_description {
+  max-width: 100%;
+  width: 100%
+}
+
+.taxdome-modal_description * {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $darkGrey
+}
+
+.taxdome-modal__close {
+  background: transparent;
+  border: none;
+  margin-left: auto;
+  padding: 4px 0 4px 8px
+}
+
+.language-modal__container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows:repeat(7, 1fr)
+}
+
+.language-modal__item {
+  min-width: 200px;
+  padding: 12px 0
+}
+
+.language-modal__link {
+  align-items: center;
+  color: $darkGrey;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 14px;
+  font-weight: 500;
+  justify-content: flex-start;
+  text-decoration: none;
+  transition: color .5s
+}
+
+.language-modal__link.disabled {
+  pointer-events: none;
+  opacity: 0.5
+}
+
+.language-modal__link:hover {
+  color: rgba(0, 50, 96, .85)
+}
+
+.language-modal__link b {
+  font-weight: 900;
+  margin-left: 10px
+}
+
+.language-modal__link span::before {
+  content: '-';
+  margin: 0 3px
+}
+
+.taxdome-modal__container {
+  max-width: 100%;
+  min-width: 250px;
+  position: relative;
+  width: 100%
+}
+
+.taxdome-modal__container:nth-child(8n+18) {
+  grid-row-start: 1
+}
+
+.taxdome-modal_notice {
+  max-width: 218px;
+  padding-left: 15px
+}
+
+.taxdome-modal_notice * {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  color: $darkGrey
+}
+
+.taxdome-modal_notice a {
+  color: rgba(0, 50, 96, .85);
+  font-weight: 700
+}
+
+.taxdome-modal.is-visible {
+  transform: scale(1)
+}
+
+.taxdome-modal.is-visible .taxdome-modal_block {
+  transform: scale(1)
+}
+
+.taxdome-modal.modal-out {
+  transform: scale(0)
+}
+
+.cookie-banner__action .btn.taxdome__button-light {
+  transition: 0.3s;
+  background-color: transparent;
+  border: 1px solid rgb(25, 118, 211);
+  color: rgb(25, 118, 211);
+  max-width: max-content;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  min-height: 48px;
+  font-size: 16px;
+  height: 48px;
+  width: 100%;
+  min-width: auto;
+  padding: 0 24px;
+  line-height: 17px;
+  font-weight: $fontWeightSemibold;
+  white-space: normal;
+  text-align: center;
+  text-decoration: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:hover {
+    background-color: rgb(20, 100, 189);
+    border-color: rgb(20, 100, 189);
+    color: $white;
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+  }
+
+}

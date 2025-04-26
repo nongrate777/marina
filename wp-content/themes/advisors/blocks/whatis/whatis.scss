@@ -1,0 +1,66 @@
+.whatis {
+  padding: 108px 0;
+
+  .container {
+    padding: 0 30px;
+  }
+
+  @include media768 {
+    padding: 60px 0;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 45px;
+    padding-bottom: 24px;
+    margin: 0;
+  }
+
+  p {
+    font-weight: $fontWeightRegular;
+    font-size: $fontSizeMedium;
+    line-height: 22px;
+    letter-spacing: .2px;
+    color: $darkGrey;
+    margin: 0;
+    max-width: 650px;
+    width: 100%;
+  }
+
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 55px;
+
+    @include media768 {
+      padding: 0;
+      flex-direction: column;
+    }
+
+    &-left, &-right {
+      width: 50%;
+      padding-right: 35px;
+      margin-top: 55px;
+      font-size: $fontSizeMedium;
+      line-height: 1.4;
+
+      img {
+        max-width: 36px;
+      }
+
+      @include media768 {
+        padding-right: 0;
+        width: 100%;
+      }
+
+      .title {
+        font-weight: $fontWeightBold;
+        margin-top: 18px;
+        margin-bottom: 5px;
+      }
+    }
+
+  }
+}

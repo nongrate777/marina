@@ -1,0 +1,90 @@
+.tableblue {
+  margin: 85px 0 0 0;
+
+  .container {
+    position: relative;
+    z-index: 10;
+    @include media768{
+      position: inherit;
+      padding: 0;
+    }
+  }
+  &::before {
+    content: "";
+    display: block;
+    @include media768 {
+      height: 38px;
+      width: 100%;
+      background: url("data:image/svg+xml,%3Csvg width='375' height='39' viewBox='0 0 375 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_41885_17934)'%3E%3Crect width='375' height='38.4334' fill='white'/%3E%3Cmask id='mask0_41885_17934' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='1366' height='140'%3E%3Crect width='1366' height='140' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_41885_17934)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M560.479 188.637L639.309 318.134C662.023 355.447 663.992 392.603 643.807 429.709C594.865 518.914 545.18 609.324 496.238 698.529C474.438 736.617 442.283 757.695 397.232 758.798C295.513 761.306 193.052 765.018 91.3335 767.527C50.1783 767.762 16.7226 752.781 -4.9892 717.114C-60.8459 627.78 -115.886 534.94 -171.001 444.402C-193.715 407.089 -188.633 369.401 -168.448 332.295C-120.99 245.498 -71.2492 158.814 -25.5352 71.5741C-2.71531 29.1046 34.3378 8.80496 80.5956 8.47192C178.956 6.50407 276.11 3.76633 373.468 0.152322C421.674 -0.614673 457.672 17.3307 481.24 60.8921C506.626 102.595 534.09 145.288 560.479 188.637Z' fill='%23F3F8FD'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_41885_17934'%3E%3Crect width='375' height='38.4334' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat top left;
+      background-size: cover;
+    }
+  }
+
+  &::after {
+    height: 240px;
+    width: 100%;
+    content: "";
+    display: block;
+    background: url("data:image/svg+xml,%3Csvg width='1366' height='141' viewBox='0 0 1366 141' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1366 141L0 141L1.23266e-05 -0.000104161L1366 1.52588e-05L1366 141Z' fill='%231976D3'/%3E%3C/svg%3E%0A") no-repeat top right;
+    background-size: cover;
+    position: relative;
+    margin-top: -140px;
+
+
+    @include media768 {
+      height: 38px;
+      background: url("data:image/svg+xml,%3Csvg width='1366' height='141' viewBox='0 0 1366 141' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1366 141L0 141L1.23266e-05 -0.000104161L1366 1.52588e-05L1366 141Z' fill='%231976D3'/%3E%3C/svg%3E%0A") no-repeat top right;
+    }
+  }
+
+  &__inner {
+    background: $white;
+    box-shadow: 0px 20px 30px rgb(43 43 43 / 10%);
+    border-radius: 8px;
+    padding: 110px;
+    font-weight: $fontWeightRegular;
+    font-size: $fontSizeMedium;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+    color: $darkGrey;
+
+    a {
+      color: #1976D3;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0.20000000298023224px;
+      text-align: left;
+    }
+
+
+    @include media768 {
+      padding: 15px;
+      margin-bottom: 130px;
+      border-radius: 0;
+    }
+
+    p {
+      @include media768 {
+        font-size: $fontSizeMedium;
+        line-height: 22px;
+        margin: 15px 0;
+        padding: 35px 25px;
+      }
+    }
+
+    h2 {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 45px;
+      color: $darkGrey;
+      margin-bottom: 24px;
+      @include media768 {
+        font-size: 25px;
+        padding-bottom: 30px;
+        text-align: center;
+      }
+    }
+  }
+}

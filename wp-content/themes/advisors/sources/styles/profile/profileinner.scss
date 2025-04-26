@@ -1,0 +1,737 @@
+.profileinner {
+  padding: 150px 0;
+
+  @include media768 {
+    padding: 120px 0 40px 0;
+    background: rgba(243, 248, 253, 1);
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 60px;
+    margin-bottom: 0px;
+
+    @include media768 {
+      font-size: 38px;
+      font-weight: 900;
+      line-height: 42px;
+      letter-spacing: -0.800000011920929px;
+      text-align: center;
+
+    }
+  }
+
+  &__breadcumbs {
+    position: relative;
+    background-color: #F3F8FD;
+
+    .breadcrumbs {
+      position: absolute;
+      top: 110px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      text-align: left;
+      color: rgba(117, 173, 229, 1);
+
+      a {
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        text-align: left;
+        color: rgba(117, 173, 229, 1);
+      }
+    }
+  }
+
+  &__connection {
+    font-size: $fontSizeMedium;
+    margin: 30px 0 10px;
+
+    img {
+      margin-bottom: -5px;
+    }
+
+    @include media768 {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    a {
+      color: rgb(28, 110, 177);
+      text-decoration: none;
+      transition: 0.3s;
+
+      &:hover {
+        color: #23527c;
+      }
+    }
+  }
+
+  &__more {
+    width: 100%;
+    background-color: $white;
+    color: rgb(41, 41, 41);
+    padding: 25px;
+    box-shadow: 0px 8px 26px 0px rgba(43, 43, 43, 0.08);
+    border-radius: 10px;
+    @include media768 {
+      border-radius: 0;
+    }
+
+
+    &-vimeo, &-youtube {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .phone-number .actual-number {
+      display: none;
+    }
+
+    span .show-number {
+      color: $white;
+      background: rgba(91, 192, 222, 0.95) url("data:image/svg+xml,%3Csvg class='fontawesomesvg' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3C!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z'/%3E%3C/svg%3E") no-repeat left center;
+      border-color: rgb(91, 192, 222);
+      box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+      display: inline;
+      padding: 10px 16px;
+      width: 100%;
+      border-radius: 100px;
+      max-width: 180px;
+      text-align: center;
+      font-size: $fontSizeSmall;
+      font-weight: $fontWeightSemibold;
+      line-height: 17px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-slogan {
+      background-color: $white;
+      padding: 15px 25px 15px 70px;
+      font-family: georgia;
+      font-size: 24px;
+      font-style: italic;
+      border-radius: 4px;
+      line-height: 1.42857143;
+      @include media768 {
+        padding: 15px;
+        width: 100%;
+      }
+    }
+
+    &-aboutme {
+      font-size: $fontSizeMedium;
+      line-height: 1.42857143;
+      font-weight: 400;
+      padding: 15px 0;
+
+      p {
+        margin: 0 0 10px;
+
+        img {
+          margin: 0 auto;
+          text-align: center;
+          display: block;
+        }
+      }
+    }
+
+    &-appointment, &-website, &-phone, &-location {
+      background-color: $white;
+      font-size: $fontSizeMedium;
+      line-height: 1.42857143;
+      font-weight: 400;
+      border-top: 1px solid rgb(238, 238, 238);
+      padding: 15px;
+      display: flex;
+      @include media768 {
+        flex-direction: column;
+      }
+
+      a {
+        color: rgb(28, 110, 177);
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover {
+          color: rgb(35, 82, 124);
+        }
+      }
+
+      span {
+        display: inline-block;
+        min-width: 265px;
+      }
+    }
+
+    &-phone {
+      span {
+        margin-top: 10px;
+      }
+    }
+
+    &-map {
+      min-width: 100%;
+      min-height: 250px;
+      margin-top: 20px;
+    }
+
+    &-about, &-company, &-information {
+      font-size: 24px;
+      font-weight: $fontWeightSemibold;
+      padding-top: 10px;
+      margin-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    &-aboutme {
+      font-size: $fontSizeMedium;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__single {
+    margin: 20px 0;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    h2 {
+      font-size: 36px;
+      font-weight: $fontWeightSemibold;
+      margin: 0 0 10px;
+    }
+
+    &-certificate {
+      position: absolute;
+      display: block;
+      width: 120px;
+      height: 120px;
+      right: 5px;
+      top: 15px;
+      background-image: url("/wp-content/themes/advisors/assets/images/certified.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      @include media768 {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+
+    &-img {
+      max-width: 216px;
+      padding: 0 15px 0 0;
+      @include media768 {
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      img {
+        border-radius: 6px;
+        width: 204px;
+        height: 204px;
+        object-fit: cover;
+        @include media768 {
+          max-width: 100%;
+          padding: 0;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    &-content {
+      width: calc(100% - 216px);
+      padding: 0 15px;
+      @include media768 {
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+        //text-align: center;
+      }
+
+      &-work {
+        margin-bottom: 10px;
+        background-color: rgba(20, 100, 189, 0.7);
+        border-color: rgba(20, 100, 189, 0.7);
+        color: rgba(255, 255, 255, 0.9);
+        display: block;
+        width: fit-content;
+        border-radius: 40px;
+        padding: 1px 5px;
+        font-size: 12px;
+        line-height: 1.5;
+        font-weight: $fontWeightSemibold;
+        @include media768 {
+          margin: 0 auto 10px auto;
+        }
+      }
+
+      &-location {
+        padding-left: 20px;
+        line-height: 1.42857143;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_37210_49200)'%3E%3Cpath d='M8 0C6.40935 0.00211004 4.88445 0.634929 3.75969 1.75969C2.63493 2.88445 2.00211 4.40935 2 6C2 10.3075 7.59 15.7025 7.8275 15.93C7.8737 15.9749 7.93558 16 8 16C8.06442 16 8.1263 15.9749 8.1725 15.93C8.41 15.7025 14 10.3075 14 6C13.9979 4.40935 13.3651 2.88445 12.2403 1.75969C11.1155 0.634929 9.59065 0.00211004 8 0ZM8 8.75C7.4561 8.75 6.92442 8.58871 6.47218 8.28654C6.01995 7.98437 5.66747 7.55488 5.45933 7.05238C5.25119 6.54988 5.19673 5.99695 5.30284 5.4635C5.40895 4.93005 5.67086 4.44005 6.05546 4.05546C6.44005 3.67086 6.93005 3.40895 7.4635 3.30284C7.99695 3.19673 8.54988 3.25119 9.05238 3.45933C9.55488 3.66747 9.98437 4.01995 10.2865 4.47218C10.5887 4.92442 10.75 5.4561 10.75 6C10.7496 6.72921 10.4597 7.42843 9.94406 7.94406C9.42843 8.45969 8.72921 8.74956 8 8.75Z' fill='%231976D3'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_37210_49200'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: 0% 50%;
+        margin-bottom: 30px;
+        color: rgb(41, 41, 41);
+        font-size: $fontSizeMedium;
+      }
+
+      &-company {
+        color: rgb(41, 41, 41);
+        font-size: $fontSizeMedium;
+        line-height: 1.42857143;
+      }
+
+      &-industry {
+        color: rgb(41, 41, 41);
+        font-size: $fontSizeMedium;
+        line-height: 1.42857143;
+        margin-bottom: 6px;
+      }
+
+      &-more {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        @include media768 {
+          justify-content: center;
+        }
+
+        .view-profile {
+          margin-right: 0;
+          width: 100%;
+          margin-bottom: 16px;
+
+          a {
+            max-width: 100%;
+          }
+        }
+
+        .for-mobile {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          border-top: 1px solid rgba(217, 217, 217, 1);
+          margin-top: 0;
+          padding-top: 16px;
+        }
+
+        .one-half {
+          max-width: 130px;
+          width: 130px;
+
+          a {
+            max-width: 130px;
+            width: 130px;
+            min-width: auto;
+          }
+        }
+      }
+    }
+
+  }
+
+  &__main {
+    @include media768 {
+      width: 100%;
+      padding: 0;
+      grid-row: 2;
+    }
+  }
+
+  &__sidebar {
+    width: 300px;
+    height: 100%;
+    padding: 0 24px 0 0;
+    margin-top: 140px;
+    @include media768 {
+      position: relative;
+      top: 10px;
+      display: contents;
+    }
+
+    .order1 {
+      @include media768 {
+        grid-row: 1;
+      }
+    }
+
+    .order2 {
+      @include media768 {
+        grid-row: 3;
+        margin-top: 0;
+      }
+    }
+
+    .order3 {
+      @include media768 {
+        grid-row: 4;
+      }
+    }
+
+    .order4 {
+      @include media768 {
+        grid-row: 5;
+      }
+    }
+
+    &-member {
+      position: relative;
+      background: url("data:image/svg+xml,%3Csvg width='342' height='505' viewBox='0 0 342 505' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_37202_56160)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M63.0133 8H39C34.5817 8 31 11.5817 31 16V443C31 447.418 34.5817 451 39 451H303C307.418 451 311 447.418 311 443V16C311 11.5817 307.418 8 303 8H279V47.1386C279 59.5176 273.976 68.8019 263.57 74.8094C251.011 82.0002 238.362 89.2365 225.713 96.4727C213.064 103.709 200.415 110.945 187.855 118.136C176.911 124.144 165.966 124.508 154.842 118.136C142.283 110.945 129.634 103.8 116.985 96.6548C104.336 89.5096 91.6871 82.3643 79.1277 75.1735C69.0803 69.166 63.1595 60.6099 63.1595 48.777C62.9974 35.294 62.9817 21.6626 63.0133 8Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_37202_56160' x='0' y='0' width='342' height='505' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='23'/%3E%3CfeGaussianBlur stdDeviation='15.5'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_37202_56160'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_37202_56160' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat top center;
+      min-width: 280px;
+      box-shadow: 0px 23px 31px rgba(21, 29, 69, 0.1);
+      border-radius: 10px;
+      padding: 24px;
+      @include media768 {
+        background: url("data:image/svg+xml,%3Csvg width='375' height='635' viewBox='0 0 375 635' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_41885_17144)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M80.0133 8L38 8C33.5817 8 30 11.5817 30 16V573C30 577.418 33.5817 581 38 581H337C341.418 581 345 577.418 345 573V16C345 11.5817 341.418 8 337 8H296V47.1386C296 59.5176 290.976 68.8019 280.57 74.8094C268.011 82.0002 255.362 89.2365 242.713 96.4727C230.064 103.709 217.415 110.945 204.855 118.136C193.911 124.144 182.966 124.508 171.842 118.136C159.283 110.945 146.634 103.8 133.985 96.6547C121.336 89.5094 108.687 82.3642 96.1277 75.1735C86.0803 69.166 80.1595 60.6099 80.1595 48.777C79.9974 35.294 79.9817 21.6626 80.0133 8Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_41885_17144' x='-1' y='0' width='377' height='635' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='23'/%3E%3CfeGaussianBlur stdDeviation='15.5'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_41885_17144'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_41885_17144' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat top center;
+        min-width: 315px;
+        width: 315px;
+        margin: 0 auto;
+      }
+
+      &-content {
+        padding-top: 140px;
+      }
+
+      &-img {
+        width: 178px;
+        height: 177px;
+        position: absolute;
+        z-index: 3;
+        top: -100px;
+        left: 50px;
+        border-radius: 6px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media768 {
+          left: calc(50% - 89px);
+          top: -95px;
+        }
+
+        img {
+          width: 168px;
+          height: 177px;
+        }
+      }
+    }
+
+    @include media768 {
+      width: 100%;
+      padding: 0;
+    }
+
+    &-contact {
+      box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.1);
+      color: rgb(41, 41, 41);
+      background: $white;
+      border-radius: 10px;
+      padding: 24px;
+      width: 100%;
+      margin: 30px 0;
+      @include media768 {
+        border-radius: 0;
+        margin: 16px 0;
+      }
+
+      label {
+        color: #475569;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: left;
+        margin-bottom: 10px;
+      }
+
+      &-form {
+        input, textarea, select {
+          width: 100%;
+          min-height: 34px;
+          padding: 6px 12px;
+          font-size: $fontSizeSmall;
+          line-height: 1.42857143;
+          color: #555;
+          background-color: $white;
+          background-image: none;
+          border: 1px solid #CBD5E1;
+          border-radius: 12px;
+          margin-bottom: 15px;
+          margin-top: 3px;
+
+          &:focus {
+            border-color: #66afe9;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+          }
+        }
+
+        input[type="submit"] {
+          transition: 0.3s;
+          background-color: $denim;
+          border: 1px solid $denim;
+          color: $white;
+          font-size: $fontSizeSmall;
+          max-width: 100%;
+          border-radius: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: nowrap;
+          min-height: 40px;
+          padding: 10px 16px;
+          line-height: 17px;
+          font-weight: $fontWeightSemibold;
+          white-space: normal;
+          text-align: center;
+          text-decoration: none;
+          -webkit-appearance: none;
+          cursor: pointer;
+          margin-left: auto;
+          margin-right: auto;
+
+          &:hover {
+            background-color: $congressBlue;
+            border-color: $congressBlue;
+          }
+        }
+      }
+
+      &-title {
+        font-size: 20px;
+        font-weight: $fontWeightSemibold;
+        margin: 0;
+        color: $black;
+        padding-bottom: 30px;
+        padding-top: 15px;
+      }
+
+      &-taxonomy {
+        margin-top: -8px;
+
+        a {
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 32px;
+          text-decoration: none;
+          color: rgba(25, 118, 211, 1);
+        }
+      }
+    }
+
+    h3 {
+      font-weight: $fontWeightBold;
+      font-size: 20px;
+      line-height: 24px;
+      background: $white;
+      padding: 10px 15px;
+      border-bottom: 1px solid rgb(238, 238, 238);
+      margin: 0;
+    }
+
+    &-ajaxsearch {
+      width: 100%;
+      border: 1px solid rgb(238, 238, 238);
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+
+      .search-form {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+
+        label {
+          font-weight: $fontWeightBold;
+          font-size: $fontSizeSmall;
+          line-height: 24px;
+        }
+
+        input {
+          height: 34px;
+          padding: 6px 12px;
+          font-size: $fontSizeSmall;
+          line-height: 1.42857143;
+          color: #555;
+          background-color: $white;
+          background-image: none;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          -webkit-transition: border-color ease-in-out .15s;
+          -o-transition: border-color ease-in-out .15s;
+          transition: border-color ease-in-out .15s;
+          margin-bottom: 15px;
+
+          &:focus {
+            border-color: #66afe9;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+          }
+        }
+
+        input[type=submit] {
+          transition: 0.3s;
+          background-color: $denim;
+          border: 1px solid $denim;
+          color: $white;
+          font-size: $fontSizeSmall;
+          max-width: max-content;
+          border-radius: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: nowrap;
+          min-height: 40px;
+          padding: 10px 16px;
+          line-height: 17px;
+          font-weight: $fontWeightSemibold;
+          white-space: normal;
+          text-align: center;
+          text-decoration: none;
+          -webkit-appearance: none;
+          cursor: pointer;
+          margin-left: auto;
+          margin-right: auto;
+
+          &:hover {
+            background-color: $congressBlue;
+            border-color: $congressBlue;
+          }
+        }
+      }
+    }
+
+    &-taxonomy {
+      width: 100%;
+      border: 1px solid rgb(238, 238, 238);
+      margin-top: 24px;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 16px;
+    position: relative;
+    @include media768 {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 0;
+      padding: 140px 0 0 0;
+    }
+  }
+
+  .sidebar-mobile {
+    display: none;
+    @include media768 {
+      display: block;
+    }
+  }
+
+  .soclinks {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+    justify-content: space-evenly;
+    margin-bottom: 12px;
+
+    &-fb {
+      color: $white;
+      margin-top: 12px;
+      background-position: 50% 50%;
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.6165 21V12.8593H16.0631L16.5 9.24121H13.6165V7.52261C13.6165 6.61809 13.6165 5.62312 14.9272 5.62312H16.2379V3.09045C16.2379 3.09045 15.102 3 13.966 3C11.6068 3 10.1214 4.53769 10.1214 7.25126V9.24121H7.5V12.8593H10.1214V21H13.6165Z' fill='%23C4C4D2'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      cursor: pointer;
+      transition: 0.3s;
+      display: block;
+      width: 24px;
+      height: 24px;
+
+      a {
+        color: $white;
+        text-decoration: none;
+        display: block;
+        width: 24px;
+        height: 24px;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &-x {
+      color: $white;
+      margin-top: 12px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.38242 21C16.1794 21 20.5458 14.6232 20.5458 9.1573C20.5458 8.95486 20.5458 8.75242 20.5458 8.6512C21.3775 8.04388 22.1052 7.33533 22.625 6.52558C21.8973 6.82924 21.0656 7.03168 20.13 7.1329C21.0656 6.6268 21.6894 5.81704 22.0012 4.80484C21.1695 5.31094 20.2339 5.6146 19.2983 5.81704C17.6349 4.09631 14.9319 4.09631 13.2686 5.61461C12.125 6.6268 11.7092 8.14509 12.021 9.56217C8.59034 9.35973 5.36757 7.84144 3.18441 5.20972C2.04084 7.1329 2.66462 9.56217 4.53591 10.7768C3.80819 10.7768 3.18443 10.5744 2.56067 10.2707C2.56067 10.2707 2.56067 10.2707 2.56067 10.3719C2.56067 12.3963 4.0161 14.0158 5.99135 14.4207C5.36758 14.6232 4.74383 14.6232 4.01611 14.5219C4.53591 16.2427 6.19926 17.3561 7.96659 17.3561C6.40718 18.4695 4.63985 19.178 2.6646 19.178C2.35272 19.178 1.93688 19.1781 1.625 19.0768C3.80817 20.3927 6.09529 21 8.38242 21Z' fill='%23C4C4D2'/%3E%3C/svg%3E%0A");
+      cursor: pointer;
+      transition: 0.3s;
+      display: block;
+      width: 24px;
+      height: 24px;
+
+      a {
+        color: $white;
+        text-decoration: none;
+        display: block;
+        width: 24px;
+        height: 24px;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+    }
+
+    &-in {
+      margin-top: 12px;
+      background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.76416 21H3.26416V9.35821H7.76416V21ZM5.42418 7.47761C4.25418 7.47761 3.26416 6.49254 3.26416 5.23881C3.26416 3.98507 4.25418 3 5.42418 3C6.59418 3 7.58415 3.98507 7.58415 5.23881C7.67415 6.49254 6.68418 7.47761 5.42418 7.47761ZM21.2642 21H17.6642C17.6642 21 17.6642 16.4328 17.6642 14.7313C17.6642 13.0299 16.9441 12.0448 15.5041 12.0448C13.9741 12.0448 13.1642 13.0299 13.1642 14.7313C13.1642 16.6119 13.1642 21 13.1642 21H9.56416V9.35821H13.1642V10.7015C13.1642 10.7015 14.3341 8.73135 16.8541 8.73135C19.3741 8.73135 21.2642 10.2537 21.2642 13.4776C21.2642 16.6119 21.2642 21 21.2642 21Z' fill='%23C4C4D2'/%3E%3C/svg%3E%0A");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      transition: 0.3s;
+      display: block;
+      width: 24px;
+      height: 24px;
+
+      a {
+        color: $white;
+        text-decoration: none;
+        display: block;
+        width: 24px;
+        height: 24px;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+div.breadcrumbs.profiles {
+  top: 80px;
+}

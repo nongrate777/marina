@@ -1,0 +1,165 @@
+.location-page {
+  padding: 82px 0;
+  @include media992 {
+    padding: 64px 0 130px;
+  }
+
+  .terms-main {
+    @include media992 {
+      margin: 0;
+      max-width: 100%;
+      border-radius: 0;
+    }
+  }
+
+  &__main {
+    margin: 0 87px 87px 87px;
+    background-color: $white;
+    padding: 44px;
+    box-shadow: 0px 20px 30px 0px rgba(43, 43, 43, 0.1);
+    position: relative;
+    @include media992 {
+      margin: 0 auto;
+      padding: 5px 24px;
+      max-width: 315px;
+      border-radius: 16px;
+    }
+
+    .last-update {
+      margin-top: 80px;
+      border-top: 1px solid rgba(224, 231, 239, 1);
+      padding-top: 12px;
+      color: rgba(196, 196, 210, 1);
+      font-weight: $fontWeightSemibold;
+      font-size: $fontSizeSmall;
+      @include media992 {
+        padding-bottom: 50px;
+      }
+
+      span {
+        color: rgba(25, 118, 211, 1);
+      }
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 1294px;
+      background: url("data:image/svg+xml,%3Csvg width='1294' height='7783' viewBox='0 0 1294 7783' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1294 7751C1294 7768.67 1279.67 7783 1262 7783L32 7783C14.3269 7783 1.2525e-06 7768.67 2.79753e-06 7751L0.000674808 64.0985C0.000678252 24.7035 35.2523 -5.33849 74.149 0.908096L1240.15 188.167C1271.18 193.15 1294 219.928 1294 251.357L1294 7751Z' fill='%23F3F8FD'/%3E%3C/svg%3E%0A") no-repeat top center;
+      position: absolute;
+      margin-top: 350px;
+      z-index: -1;
+      border-radius: 60px;
+      left: -87px;
+      @include media992 {
+        width: -webkit-fill-available;
+        background-size: cover;
+        border-radius: 0;
+      }
+    }
+
+    &.dynamic-height::before {
+      min-height: calc(100% - 280px);
+      @include media992 {
+        min-height: calc(100% - 330px);
+        margin-top: 385px;
+        margin-right: -100%;
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+    overflow: visible;
+    padding: 0;
+    background-image: url("/wp-content/themes/advisors/assets/images/search_back.svg");
+    background-repeat: no-repeat;
+    @include media992 {
+      background-size: auto;
+      background-position-x: -100px;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 44px;
+    font-weight: 900;
+    margin: 0 0 40px 0;
+    color: $white;
+    @include media992 {
+      font-size: 38px;
+      font-weight: 900;
+      line-height: 42px;
+      letter-spacing: -0.8px;
+      text-align: center;
+    }
+  }
+}
+
+.locations {
+  &__country {
+    padding-bottom: 30px;
+    padding-top: 24px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    @include media992 {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 30px;
+    }
+
+    .all_services {
+      color: rgba(25, 118, 211, 1);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22px;
+      text-align: right;
+      @include media992 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22px;
+        text-align: right;
+
+      }
+    }
+
+    a {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 30px;
+      text-align: left;
+      text-decoration: none;
+      color: $darkGrey;
+
+    }
+  }
+
+  &__regions {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      width: 164px;
+      padding: 8px 0;
+
+      a {
+        color: $darkGrey;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 18px;
+        text-align: left;
+        transition: 0.3s;
+        display: block;
+        padding: 10px 18px;
+
+        &:hover {
+          background: rgba(243, 248, 253, 1);
+          color: rgba(25, 118, 211, 1);
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+Minio is an S3 compatible cloud storage software that you install and host yourself.<?php /**PATH C:\Users\Developer\Local Sites\advisors\app\public\wp-content\plugins\ilab-media-tools\views/wizard/cloud-storage/providers/minio/description.blade.php ENDPATH**/ ?>

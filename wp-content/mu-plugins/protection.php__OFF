@@ -1,0 +1,107 @@
+<?php
+/**
+ * Plugin Name: Protection
+ */
+
+function is_user_allowed()
+{
+    if (is_user_logged_in()) {
+        $current_user_id = get_current_user_id();
+        return $current_user_id === 16;
+    }
+    return false;
+}
+
+function block_modifications()
+{
+    if (!is_user_allowed()) {
+        define('DISALLOW_FILE_MODS', true);
+    }
+}
+
+function is_invalid_request($url, $query_params)
+{
+    // Check if the request contains potentially harmful parameters.
+    foreach ($query_params as $key => $value) {
+        if (!is_array($value)) {
+            if (preg_match('/<script.*>/i', urldecode($value)) === 1) {
+                return true;
+            }
+            if (preg_match('/<php.*>/i', urldecode($value)) === 1) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+function block_invalid_requests()
+{
+    if (!is_user_allowed() && !is_admin() && !empty($_GET) && is_array($_GET) && !empty($_SERVER)) {
+        $scheme = !empty($_SERVER['REQUEST_SCHEME']) ? $_SERVER['REQUEST_SCHEME'] : 'http';
+        $host = !empty($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
+        $url = isset($_SERVER['REDIRECT_URL']) ? $scheme . '://' . $host . $_SERVER['REDIRECT_URL'] : $scheme . '://' . $host;
+
+        if (is_invalid_request($url, $_GET)) {
+            wp_redirect($url);
+            exit;
+        }
+    }
+}
+
+function custom_login_logout_url($default)
+{
+    // Replace login and logout URLs.
+    return str_replace('wp-login', 'taxdome-auth', $default);
+}
+
+function block_wp_admin_login()
+{
+    if (defined('DOING_AJAX') && DOING_AJAX) return;
+    if (is_user_logged_in()) return;
+    if (empty($_SERVER) || empty($_SERVER['REQUEST_SCHEME']) || empty($_SERVER['HTTP_HOST'])) return;
+
+    $url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'];
+
+    if (stripos($_SERVER['REQUEST_URI'], '/wp-admin') !== false || stripos($_SERVER['REQUEST_URI'], '/wp-login') !== false) {
+        wp_redirect($url);
+        exit;
+    }
+}
+
+function remove_menu_pages()
+{
+    if (is_user_allowed()) {
+        $current_user_id = get_current_user_id();
+        if ($current_user_id !== 16) {
+            remove_submenu_page('index.php', 'update-core.php');
+            remove_submenu_page('tools.php', 'site-health.php');
+        }
+    }
+}
+
+add_action('plugins_loaded', 'block_modifications', 1);
+add_action('plugins_loaded', 'block_invalid_requests', 1);
+add_filter('logout_url', 'custom_login_logout_url');
+add_filter('login_url', 'custom_login_logout_url');
+add_action('init', 'block_wp_admin_login', 1);
+add_action('admin_menu', 'remove_menu_pages', 99);
+/**
+ * Disable updates
+ */
+function disable_all_updates()
+{
+    // Disable all automatic updates
+    define('AUTOMATIC_UPDATER_DISABLED', true);
+
+    // Disable core updates
+    define('WP_AUTO_UPDATE_CORE', false);
+
+    // Disable plugin updates
+    add_filter('auto_update_plugin', '__return_false');
+
+    // Disable theme updates
+    add_filter('auto_update_theme', '__return_false');
+}
+
+add_action('init', 'disable_all_updates');

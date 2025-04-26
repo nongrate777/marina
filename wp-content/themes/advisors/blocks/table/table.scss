@@ -1,0 +1,73 @@
+.table {
+  margin: 35px 0 0 0;
+  background-color: #F3F8FD;
+  padding-bottom: 50px;
+  .container{
+    @include media768{
+      padding: 0;
+    }
+  }
+  &::before {
+    height: 140px;
+    width: 100%;
+    content: "";
+    display: block;
+    background: url("data:image/svg+xml,%3Csvg width='1366' height='140' viewBox='0 0 1366 140' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_37178_46412)'%3E%3Crect width='1366' height='140' transform='matrix(-1 0 0 1 1366 0)' fill='white'/%3E%3Cmask id='mask0_37178_46412' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='1366' height='140'%3E%3Crect width='1366' height='140' transform='matrix(-1 0 0 1 1366 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_37178_46412)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-675.636 687.141L-962.79 1158.86C-1045.53 1294.78 -1052.7 1430.12 -979.174 1565.28C-800.893 1890.23 -619.908 2219.56 -441.628 2544.51C-362.219 2683.25 -245.091 2760.03 -80.9824 2764.05C289.545 2773.19 662.776 2786.71 1033.3 2795.84C1183.22 2796.7 1305.09 2742.13 1384.17 2612.21C1587.64 2286.79 1788.14 1948.61 1988.9 1618.81C2071.64 1482.89 2053.13 1345.6 1979.6 1210.44C1806.73 894.265 1625.54 578.507 1459.02 260.72C1375.89 106.018 1240.92 32.0732 1072.42 30.86C714.124 23.6918 360.224 13.7192 5.58035 0.554458C-170.018 -2.23935 -301.147 63.1296 -386.997 221.809C-479.47 373.718 -579.513 529.236 -675.636 687.141Z' fill='%23F3F8FD'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_37178_46412'%3E%3Crect width='1366' height='140' fill='white' transform='matrix(-1 0 0 1 1366 0)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat top right;
+    @include media768 {
+      height: 38px;
+      background: url("data:image/svg+xml,%3Csvg width='375' height='39' viewBox='0 0 375 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_41885_17684)'%3E%3Crect width='375' height='38.4334' transform='matrix(-1 0 0 1 375 0)' fill='white'/%3E%3Cmask id='mask0_41885_17684' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='-991' y='0' width='1366' height='140'%3E%3Crect width='1366' height='140' transform='matrix(-1 0 0 1 375 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_41885_17684)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-185.479 188.637L-264.309 318.134C-287.023 355.447 -288.992 392.603 -268.807 429.708C-219.865 518.914 -170.18 609.323 -121.238 698.529C-99.4379 736.617 -67.2834 757.695 -22.2317 758.798C79.487 761.306 181.948 765.018 283.667 767.526C324.822 767.761 358.277 752.781 379.989 717.114C435.846 627.78 490.886 534.94 546.001 444.402C568.715 407.089 563.633 369.401 543.448 332.295C495.99 245.497 446.249 158.814 400.535 71.574C377.715 29.1045 340.662 8.80484 294.404 8.4718C196.044 6.50394 98.89 3.7662 1.53184 0.1522C-46.6742 -0.614795 -82.6722 17.3306 -106.24 60.892C-131.626 102.595 -159.09 145.288 -185.479 188.637Z' fill='%23F3F8FD'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_41885_17684'%3E%3Crect width='375' height='38.4334' fill='white' transform='matrix(-1 0 0 1 375 0)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat top right;
+    }
+  }
+
+  &__inner {
+    background: $white;
+    box-shadow: 0px 20px 30px rgb(43 43 43 / 10%);
+    border-radius: 8px;
+    padding: 110px;
+    font-weight: $fontWeightRegular;
+    font-size: $fontSizeMedium;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+    color: $darkGrey;
+    @include media768{
+      border-radius: 0px;
+    }
+
+    a {
+      color: #1976D3;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0.20000000298023224px;
+      text-align: left;
+    }
+
+
+    @include media768 {
+      padding: 15px;
+    }
+
+    p {
+      @include media768 {
+        font-size: $fontSizeMedium;
+        line-height: 22px;
+        margin: 15px 0;
+        padding: 35px 25px;
+      }
+    }
+
+    h2 {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 45px;
+      color: $darkGrey;
+      margin-bottom: 24px;
+      @include media768 {
+        font-size: 25px;
+        padding-bottom: 30px;
+        text-align: center;
+      }
+    }
+  }
+}

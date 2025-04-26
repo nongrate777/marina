@@ -1,0 +1,109 @@
+.about {
+  margin-top: 120px;
+  min-height: 500px;
+  @include media768 {
+    margin-top: 40px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    .breadcrumbs {
+      position: absolute;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      text-align: left;
+      color: #75ADE5;
+
+      a {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        text-align: left;
+        color: #75ADE5;
+        text-decoration: none;
+      }
+
+    }
+
+    &-left {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include media768 {
+        width: 100%;
+      }
+
+      h1 {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 52px;
+        line-height: 60px;
+        letter-spacing: -0.8px;
+        color: $darkGrey;
+        max-width: 500px;
+        @include media768 {
+          margin-top: 60px;
+          font-size: 36px;
+          line-height: 45px;
+        }
+      }
+
+      p {
+        margin-top: 27px;
+        margin-bottom: 41px;
+        font-weight: $fontWeightRegular;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 0.2px;
+        color: $darkGrey;
+        max-width: 500px;
+
+        @include media768 {
+          font-size: $fontSizeMedium;
+          line-height: 22px;
+        }
+      }
+    }
+
+    &-right {
+      width: 50%;
+      padding-top: 50px;
+      text-align: right;
+
+      img {
+        background: $white;
+        box-shadow: 0px 20px 30px rgba(43, 43, 43, 0.1);
+        padding: 25px;
+        border-radius: 8px;
+      }
+
+      @include media768 {
+        margin-top: 15px;
+        width: 100%;
+        padding-top: 0;
+      }
+    }
+  }
+
+  .taxdome__button {
+    .mobile-about {
+      @include media768 {
+        min-width: 314px;
+      }
+    }
+
+    a {
+      margin-left: 0;
+      @include media768 {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+
