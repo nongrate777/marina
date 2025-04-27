@@ -2,16 +2,16 @@
 /**
  * Block: Services
  */
-$fields        = get_fields();
-if ( ! is_array( $fields ) ) {
+$fields = get_fields();
+if (!is_array($fields)) {
     $fields = [];
 }
-$fields_title  = isset( $fields['title'] )       ? $fields['title']       : '';
-$fields_desc   = isset( $fields['description'] ) ? $fields['description'] : '';
-$fields_button = isset( $fields['button'] )      ? $fields['button']      : '';
-$fields_link   = isset( $fields['button_link'] ) ? $fields['button_link'] : '';
-$fields_image  = isset( $fields['image'] )       ? $fields['image']       : '';
-$fields_items  = isset( $fields['items'] )       ? $fields['items']       : [];
+$fields_title = isset($fields['title']) ? $fields['title'] : '';
+$fields_desc = isset($fields['description']) ? $fields['description'] : '';
+$fields_button = isset($fields['button']) ? $fields['button'] : '';
+$fields_link = isset($fields['button_link']) ? $fields['button_link'] : '';
+$fields_image = isset($fields['image']) ? $fields['image'] : '';
+$fields_block = isset($fields['block']) ? $fields['block'] : '';
 ?>
 <section class="services">
     <?php
@@ -34,18 +34,14 @@ $fields_items  = isset( $fields['items'] )       ? $fields['items']       : [];
     ?>
     <div class="container">
         <div class="services__left">
-           <?php
+            <?php
             /**
-             * Options
+             * Block
              */
-            if (!empty($fields_items)) { ?>
-                <ul>
-                    <?php foreach ($fields_items as $item) { ?>
-                        <li class="item_inner">
-                            <?php echo wp_kses_post($item['item_inner']); ?>
-                        </li>
-                    <?php } ?>
-                </ul>
+            if (!empty($fields_block)) { ?>
+                <div class="services__left-block">
+                    <?php echo wp_kses_post($fields_block); ?>
+                </div>
             <?php }
             /**
              * Button
@@ -73,7 +69,7 @@ $fields_items  = isset( $fields['items'] )       ? $fields['items']       : [];
                      src="<?php echo wp_kses_post($fields_image['url']); ?>"
                      alt="<?php echo wp_kses_post($fields_image['alt']); ?>"
                      decoding="async"
-                     >
+                >
             <?php } ?>
         </div>
     </div>

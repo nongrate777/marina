@@ -8,7 +8,7 @@
   border-radius: 8px;
   bottom: 10px;
   color: #0F172A;
-  max-width: 497px;
+  max-width: 537px;
   padding: 35px 40px;
   position: fixed;
   right: 10px;
@@ -34,7 +34,7 @@
     font-size: 15px;
     line-height: 1.3;
     a{
-      color: #1976D3;
+      color: #9D4DFF;
       font-weight: 700;
       text-decoration: none;
     }
@@ -47,8 +47,8 @@
     min-width: auto;
     padding: 0 24px;
     transition: 0.3s;
-    background-color: #1976d3;
-    border: 1px solid #1976d3;
+    background-color: #9D4DFF;
+    border: 1px solid #9D4DFF;
     color: #ffffff;
     max-width: -moz-max-content;
     max-width: -webkit-max-content;
@@ -71,8 +71,8 @@
     margin-right: auto;
 
     &:hover {
-      background-color: $congressBlue;
-      border-color: $congressBlue;
+      background-color: #9D4DFF;
+      border-color: #9D4DFF;
     }
   }
 
@@ -409,8 +409,8 @@
 .cookie-banner__action .btn.taxdome__button-light {
   transition: 0.3s;
   background-color: transparent;
-  border: 1px solid rgb(25, 118, 211);
-  color: rgb(25, 118, 211);
+  border: 1px solid #9D4DFF;
+  color: #9D4DFF;
   max-width: max-content;
   border-radius: 40px;
   display: flex;
@@ -434,8 +434,8 @@
   margin-right: auto;
 
   &:hover {
-    background-color: rgb(20, 100, 189);
-    border-color: rgb(20, 100, 189);
+    background-color: #9D4DFF;
+    border-color: #9D4DFF;
     color: $white;
     background-image: none;
     outline: 0;

@@ -3,10 +3,12 @@
     "/assets/styles/admin.css": "/assets/styles/admin.css",
     "/assets/styles/styles.css": "/assets/styles/styles.css",
     "/assets/images/arrow.svg": "/assets/images/arrow.svg",
+    "/assets/images/banner.png": "/assets/images/banner.png",
     "/assets/images/certified.svg": "/assets/images/certified.svg",
     "/assets/images/close-blue.svg": "/assets/images/close-blue.svg",
     "/assets/images/fn.png": "/assets/images/fn.png",
     "/assets/images/logo-login.svg": "/assets/images/logo-login.svg",
+    "/assets/images/logo.png": "/assets/images/logo.png",
     "/assets/images/search_back.svg": "/assets/images/search_back.svg",
     "/assets/images/search_main.svg": "/assets/images/search_main.svg",
     "/assets/images/single.svg": "/assets/images/single.svg",
@@ -33,6 +35,10 @@
     "/assets/js/scripts.min.js": "/assets/js/scripts.min.js",
     "/assets/styles/styles.min.css": "/assets/styles/styles.min.css",
     "/assets/styles/admin.min.css": "/assets/styles/admin.min.css",
-    "/assets/images/banner.png": "/assets/images/banner.png",
-    "/assets/images/logo.png": "/assets/images/logo.png"
+    "/assets/images/steps-1.png": "/assets/images/steps-1.png",
+    "/assets/images/steps-2.png": "/assets/images/steps-2.png",
+    "/assets/images/steps-3.png": "/assets/images/steps-3.png",
+    "/assets/images/steps-4.png": "/assets/images/steps-4.png",
+    "/assets/images/steps-5.png": "/assets/images/steps-5.png",
+    "/assets/images/steps-6.png": "/assets/images/steps-6.png"
 }

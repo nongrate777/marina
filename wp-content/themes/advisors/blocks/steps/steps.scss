@@ -1,0 +1,119 @@
+.steps {
+  padding: 80px 0;
+  background: $black;
+  position: relative;
+  min-height: 520px;
+  color: $white;
+
+  @include media768 {
+    padding: 40px 0;
+    min-height: auto;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      padding-bottom: 38px;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 1;
+      color: #9D4DFF;
+      margin: 0 auto;
+      text-align: center;
+
+      span {
+        color: #00C7FF;
+      }
+
+      @include media768 {
+        padding-bottom: 30px;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 45px;
+        text-align: center;
+      }
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    &-blocks {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
+      padding-bottom: 40px;
+      padding-left: 0;
+      @include media768 {
+        flex-direction: column;
+        padding-left: 0;
+      }
+
+      .block_inner {
+        width: 30%;
+        min-height: 230px;
+        background-color: transparent;
+        border-radius: 20px;
+        padding: 60px 20px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        display: flex;
+        flex-wrap: wrap;
+        border: 3px solid #00C7FF;
+        position: relative;
+
+        &::before {
+        content: '';
+        position: absolute;
+        top: -36px;
+        left: -36px;
+        width: 72px;
+        height: 72px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+        &-number{
+
+        }
+        @include media768 {
+          width: 100%;
+        }
+
+        img {
+          width: 130px;
+          height: fit-content;
+        }
+
+        .block_inner-text {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+
+}
+.steps__main-blocks > li:nth-child(1)::before {
+  background-image: url('../images/steps-1.png');
+}
+.steps__main-blocks > li:nth-child(2)::before {
+  background-image: url('../images/steps-2.png');
+}
+.steps__main-blocks > li:nth-child(3)::before {
+  background-image: url('../images/steps-3.png');
+}
+.steps__main-blocks > li:nth-child(4)::before {
+  background-image: url('../images/steps-4.png');
+}
+.steps__main-blocks > li:nth-child(5)::before {
+  background-image: url('../images/steps-5.png');
+}
+.steps__main-blocks > li:nth-child(6)::before {
+  background-image: url('../images/steps-6.png');
+}

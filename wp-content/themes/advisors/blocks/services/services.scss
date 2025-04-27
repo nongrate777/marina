@@ -6,7 +6,7 @@
 
   @include media768 {
     margin: 0;
-    padding: 0;
+    padding: 40px 0;
   }
 
   h2 {
@@ -23,11 +23,11 @@
     }
 
     @include media768 {
-      padding-bottom: 30px;
-      text-align: left;
-      font-size: 20px;
+      padding: 0 15px 30px 15px;
+      font-size: 28px;
       font-weight: 700;
       line-height: 45px;
+      text-align: center;
     }
   }
 
@@ -48,6 +48,9 @@
     span {
       color: #00C7FF;
     }
+    @include media768{
+      padding: 0 15px;
+    }
   }
 
   &__left {
@@ -56,6 +59,18 @@
     padding-left: 0;
     @include media768 {
       max-width: 100%;
+    }
+    &-block{
+      background-color: rgba(168, 179, 207, 0.22);
+      border-radius: 20px;
+      padding: 20px 35px;
+      margin: 20px 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+      span {
+        color: #00C7FF;
+      }
     }
 
 
@@ -68,14 +83,14 @@
     }
 
     li {
-      list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_37160_17869)'%3E%3Cpath d='M8 0C3.60594 0 0 3.60594 0 8C0 12.3941 3.60594 16 8 16C12.3941 16 16 12.3941 16 8C16 3.60594 12.3941 0 8 0ZM8.08676 10.6797C7.4962 11.2166 6.58808 11.195 6.02372 10.6306L4.19141 8.79834C3.82533 8.43227 3.82533 7.83873 4.19141 7.47265C4.55749 7.10658 5.15101 7.10658 5.51709 7.47265L6.78169 8.73726C6.95607 8.91164 7.23667 8.91832 7.41915 8.75243L10.8945 5.59319C11.2775 5.24498 11.8703 5.27313 12.2186 5.65608C12.567 6.03917 12.5389 6.63222 12.1557 6.98057L8.08676 10.6797Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_37160_17869'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+      list-style-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 9.18018C7.34721 9.18018 9.25 7.27739 9.25 4.93018C9.25 2.58297 7.34721 0.680176 5 0.680176C2.65279 0.680176 0.75 2.58297 0.75 4.93018C0.75 7.27739 2.65279 9.18018 5 9.18018Z' fill='white'/%3E%3C/svg%3E%0A");
       color: $white;
-      font-size: $fontSizeMedium;
-      font-weight: $fontWeightRegular;
-      line-height: 1.3em;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
       margin: 10px 0;
       position: relative;
-      padding-bottom: 12px;
+      padding-left: 18px;
 
       a {
         color: $white;
@@ -83,11 +98,7 @@
       }
 
       span {
-        font-size: $fontSizeMedium;
-        font-weight: $fontWeightBold;
-        padding-bottom: 2px;
-        position: absolute;
-        top: -2px;
+        color: #00C7FF;
       }
     }
   }
@@ -101,6 +112,7 @@
     @include media768 {
       width: 100%;
       text-align: center;
+      margin: 0 auto;
     }
   }
 

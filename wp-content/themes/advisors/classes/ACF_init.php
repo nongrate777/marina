@@ -68,6 +68,9 @@ class ACF_init
             'twocolumns'  => 'Two columns Block',
             'bluefour'    => 'Blue Four columns Block',
             'location'    => 'Locations Block',
+            'happy'       => 'Happy Block',
+            'get'         => 'Get Block',
+            'steps'       => 'Steps Block',
             '404'         => '404 page'
         );
 
