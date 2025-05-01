@@ -1,0 +1,174 @@
+.slider {
+  padding: 80px 0;
+  background: $black;
+  position: relative;
+  min-height: 520px;
+  color: $white;
+
+  @include media768 {
+    padding: 40px 0;
+    min-height: auto;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+
+    &-content {
+      padding: 0 65px;
+      @include media992 {
+        padding: 0 10px;
+      }
+    }
+
+    h2 {
+      padding-bottom: 38px;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 1;
+      color: #9D4DFF;
+      margin: 0 auto;
+      text-align: center;
+
+      span {
+        color: #00C7FF;
+      }
+
+      @include media768 {
+        padding-bottom: 30px;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 45px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+#metaslider-id-983 .flexslider .caption-wrap {
+  color: $white !important;
+  position: absolute;
+  background: transparent !important;
+  border: none;
+  top: 0;
+  right: 0;
+}
+
+#metaslider_983.flexslider .slides li {
+  border-radius: 20px;
+  border: 4px solid #00C7FF;
+  position: relative;
+  margin-left: 10px;
+  height: 313px;
+  background: linear-gradient(
+                  to right,
+                  rgba(0, 199, 255, 0.39) 50%,
+                  transparent 50%
+  );
+  @include media992 {
+    height: 400px;
+    margin-left: 0;
+  }
+}
+
+#metaslider_983.flexslider .slides li img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  max-width: 270px;
+  object-fit: inherit;
+  -moz-border-radius-bottomleft: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.metaslider.ms-theme-clarity .flexslider .caption-wrap .caption {
+  padding: 10px 10px 10px 0 !important;
+  text-align: right !important;
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #9D4DFF;
+  }
+
+  .desc {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-left: 40%;
+    @include media992 {
+      font-size: 14px;
+    }
+  }
+
+  .position {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .button {
+    text-align: right;
+    display: flex;
+    justify-content: end;
+
+    a {
+      display: block;
+      width: 45px;
+      height: 32px;
+      text-decoration: none;
+      font-size: 0px;
+      background: url("data:image/svg+xml,%3Csvg width='45' height='32' viewBox='0 0 45 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M37.38 0.609985H7.57999C3.59999 0.609985 0.369995 4.29 0.369995 8.84V23.56C0.369995 28.1 3.59999 31.79 7.57999 31.79H37.38C41.36 31.79 44.59 28.11 44.59 23.56V8.84C44.59 4.29 41.37 0.609985 37.38 0.609985ZM17.89 23.76V8.63L30.82 16.19L17.89 23.76Z' fill='white'/%3E%3C/svg%3E%0A") no-repeat;
+      transition: filter 0.3s ease;
+
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(76%) sepia(10%) saturate(4311%) hue-rotate(152deg) brightness(100%) contrast(100%);
+      }
+    }
+  }
+}
+
+#metaslider-id-983 .flexslider .flex-control-nav li a.flex-active {
+  background: #9D4DFF !important;
+  width: 13px !important;
+  height: 13px !important;
+}
+
+.metaslider.ms-theme-clarity .flexslider .flex-control-paging li a {
+  width: 8px !important;
+  height: 8px !important;
+  background: #9D4DFF !important;
+}
+
+#metaslider-id-983 .flexslider .flex-direction-nav li {
+  background-color: transparent !important;
+}
+
+#metaslider-id-983 .flexslider .flex-direction-nav li {
+  border-color: transparent !important;
+}
+
+#metaslider-id-983 .flexslider .flex-direction-nav li a.flex-prev, #metaslider-id-983 .flexslider .flex-direction-nav li a.flex-next {
+  background-color: #9D4DFF !important;
+}
+
+#metaslider-id-983 .flexslider .flex-direction-nav li a.flex-prev:hover, #metaslider-id-983 .flexslider .flex-direction-nav li a.flex-next:hover {
+  background-color: $white !important;
+}
+
+.metaslider.ms-theme-clarity .flexslider .flex-direction-nav li.flex-nav-prev {
+  @include media992 {
+    left: 0px !important;
+  }
+}
+
+.metaslider.ms-theme-clarity .flexslider .flex-direction-nav li.flex-nav-next {
+  @include media992 {
+    right: 0px !important;
+  }
+}

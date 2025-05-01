@@ -26,7 +26,7 @@ include_once 'classes/Send_message.php';
 /**
  * Sanitize
  */
-include_once 'classes/Sanitize.php';
+//include_once 'classes/Sanitize.php';
 /**
  * Synchronization
  */

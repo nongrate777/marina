@@ -1,6 +1,6 @@
 <?php
 /**
- * Block: Get block
+ * Block: Plan block
  */
 $fields = get_fields();
 $fields_title  = isset( $fields['title'] )           ? $fields['title']           : '';

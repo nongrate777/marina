@@ -11,9 +11,10 @@
   }
 
   &__main {
-    @include media768{
+    @include media768 {
       padding: 0 15px;
     }
+
     &-description {
       font-size: 15px;
       margin: 15px 0;
@@ -21,7 +22,8 @@
       color: $white;
       font-weight: 400;
       line-height: 1.5;
-      span{
+
+      span {
         color: #00C7FF;
       }
 
@@ -69,7 +71,7 @@
     max-width: 440px;
     color: #00C7FF;
     font-weight: 400;
-    @include media768{
+    @include media768 {
       line-height: 1.5;
     }
     @include media576 {
@@ -79,9 +81,18 @@
 
   &__search {
     border-radius: 14px;
-    display: block;
     max-width: 600px;
     width: 522px;
+    display: flex;
+    align-items: center;
+
+    .banner__video {
+      width: 522px;
+      @include media992 {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
 
     @include media768 {
       margin: 70px auto 0 auto;
@@ -97,6 +108,7 @@
     }
 
     .tab {
+
       &__head {
         display: flex;
         margin-bottom: 24px;

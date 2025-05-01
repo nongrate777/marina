@@ -2,17 +2,37 @@
   padding: 35px 0;
   background: $black;
   color: $white;
-  @include media768{
+  @include media768 {
     padding: 0;
   }
 
-  &__main{
-    &-text{
+  &__social {
+    display: flex;
+    column-gap: 40px;
+    padding-top: 30px;
+    justify-content: center;
+
+    &-link {
+      max-height: 21px;
+      width: auto;
+
+      img {
+        transition: filter 0.3s ease;
+
+        &:hover {
+          filter: brightness(0) saturate(100%) invert(76%) sepia(10%) saturate(4311%) hue-rotate(152deg) brightness(100%) contrast(100%);
+        }
+      }
+    }
+  }
+
+  &__main {
+    &-text {
       font-weight: 600;
       font-size: 22px;
       margin-bottom: 30px;
       color: #FCFCFC;
-      @include media768{
+      @include media768 {
         line-height: 1.5;
         margin-bottom: 10px;
         text-align: center;

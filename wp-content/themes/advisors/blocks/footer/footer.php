@@ -14,6 +14,10 @@ $center_menu = isset($fields['center_menu']) ? $fields['center_menu'] : [];
 $right_menu = isset($fields['right_menu']) ? $fields['right_menu'] : [];
 $copyright = isset($fields['copyright']) ? $fields['copyright'] : '';
 $description = isset($fields['description']) ? $fields['description'] : '';
+$instagram = isset($fields['instagram']) ? $fields['instagram'] : '';
+$youtube = isset($fields['youtube']) ? $fields['youtube'] : '';
+$twitter = isset($fields['twitter']) ? $fields['twitter'] : '';
+$linkedin = isset($fields['linkedin']) ? $fields['linkedin'] : '';
 $advisor_profile = isset($fields['advisor_profile']) ? $fields['advisor_profile'] : '';
 ?>
 </main>
@@ -162,6 +166,32 @@ $advisor_profile = isset($fields['advisor_profile']) ? $fields['advisor_profile'
                     </div>
                 <?php } ?>
             </div>
+        </div>
+        <div class="footer__social">
+            <?php
+            /**
+             * Soclinks
+             */
+            if (!empty($instagram)) { ?>
+                <div class="footer__social-link">
+                    <a href="<?php echo wp_kses_post($instagram); ?>"><img src="data:image/svg+xml,%3Csvg width='23' height='22' viewBox='0 0 23 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.4801 22.0098H4.18008C2.20008 22.0098 0.590088 20.3801 0.590088 18.3701V3.87988C0.590088 1.87988 2.20008 0.240234 4.18008 0.240234H18.4801C20.4601 0.240234 22.0701 1.86988 22.0701 3.87988V18.3701C22.0701 20.3801 20.4601 22.0098 18.4801 22.0098ZM4.18008 1.4502C2.85008 1.4502 1.77008 2.5499 1.77008 3.8999V18.3901C1.77008 19.7401 2.85008 20.8398 4.18008 20.8398H18.4801C19.8101 20.8398 20.8901 19.7401 20.8901 18.3901V3.8999C20.8901 2.5499 19.8101 1.4502 18.4801 1.4502H4.18008Z' fill='white'/%3E%3Cpath d='M11.33 16.7202C9.86005 16.7202 8.47005 16.1401 7.43005 15.0801C6.39005 14.0301 5.82007 12.6199 5.82007 11.1299C5.82007 9.63988 6.39005 8.24018 7.43005 7.18018C8.47005 6.13018 9.85005 5.54004 11.33 5.54004C12.81 5.54004 14.1901 6.12018 15.2301 7.18018C16.2701 8.23018 16.8401 9.63988 16.8401 11.1299C16.8401 12.6199 16.2701 14.0201 15.2301 15.0801C14.1901 16.1401 12.8 16.7202 11.33 16.7202ZM11.33 6.74023C8.94005 6.74023 6.99005 8.70988 6.99005 11.1299C6.99005 13.5499 8.93005 15.52 11.33 15.52C13.72 15.52 15.6701 13.5499 15.6701 11.1299C15.6701 8.70988 13.72 6.74023 11.33 6.74023Z' fill='white'/%3E%3Cpath d='M18.33 4.68018C18.9154 4.68018 19.39 4.20081 19.39 3.60986C19.39 3.01892 18.9154 2.54004 18.33 2.54004C17.7446 2.54004 17.27 3.01892 17.27 3.60986C17.27 4.20081 17.7446 4.68018 18.33 4.68018Z' fill='white'/%3E%3C/svg%3E%0A"></a>
+                </div>
+            <?php }
+            if (!empty($youtube)) { ?>
+                <div class="footer__social-link">
+                    <a href="<?php echo wp_kses_post($youtube); ?>"><img src="data:image/svg+xml,%3Csvg width='29' height='21' viewBox='0 0 29 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.1002 0.350098H4.87021C2.30021 0.350098 0.220215 2.73016 0.220215 5.66016V15.1602C0.220215 18.0902 2.30021 20.4702 4.87021 20.4702H24.1002C26.6702 20.4702 28.7502 18.0902 28.7502 15.1602V5.66016C28.7502 2.72016 26.6702 0.350098 24.1002 0.350098ZM11.5202 15.29V5.52979L19.8702 10.4102L11.5202 15.29Z' fill='white'/%3E%3C/svg%3E%0A"></a>
+                </div>
+            <?php }
+            if (!empty($twitter)) { ?>
+                <div class="footer__social-link">
+                    <a href="<?php echo wp_kses_post($twitter); ?>"><img src="data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.12 9.29004L20.88 0.339844H19.03L12.31 8.1001L6.95001 0.339844H0.73999L8.85999 12.0898L0.73999 21.4702H2.58002L9.67999 13.27L15.34 21.4702H21.54L13.12 9.29004ZM10.6 12.1899L9.77002 11.0098L3.21002 1.68994L6.02002 1.68018L11.32 9.20996L12.15 10.3901L19.05 20.1899H16.23L10.6 12.1899Z' fill='white'/%3E%3C/svg%3E%0A"></a>
+                </div>
+            <?php }
+            if (!empty($linkedin)) { ?>
+                <div class="footer__social-link">
+                    <a href="<?php echo wp_kses_post($linkedin); ?>"><img src="data:image/svg+xml,%3Csvg width='24' height='22' viewBox='0 0 24 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.74994 6.50977H0.689941V21.52H5.74994V6.50977Z' fill='white'/%3E%3Cpath d='M23.4501 12.3597C23.2601 9.30974 22.28 8.22981 21.11 7.18981C19.94 6.15981 17.74 5.80987 15.85 6.49987C14.7 6.91987 13.8401 7.80981 13.4001 8.43981V6.50964H8.29004V21.4901H12.5601H13.3401H13.41V13.14C13.41 13.14 13.3801 13.1399 13.4601 12.2699C13.5401 11.3999 14.4701 10.6898 14.8301 10.3998C15.1901 10.1098 16.7201 9.89981 17.6901 10.6898C18.6601 11.4798 18.48 13.4999 18.48 13.4999V21.4901H23.4601C23.4501 21.5001 23.6301 15.4197 23.4501 12.3597Z' fill='white'/%3E%3Cpath d='M3.21008 4.93018C4.82275 4.93018 6.13007 3.86 6.13007 2.54004C6.13007 1.22008 4.82275 0.149902 3.21008 0.149902C1.59741 0.149902 0.290039 1.22008 0.290039 2.54004C0.290039 3.86 1.59741 4.93018 3.21008 4.93018Z' fill='white'/%3E%3C/svg%3E%0A"></a>
+                </div>
+            <?php } ?>
         </div>
     </div>
 </footer>

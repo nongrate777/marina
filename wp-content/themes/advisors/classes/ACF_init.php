@@ -71,6 +71,9 @@ class ACF_init
             'happy'       => 'Happy Block',
             'get'         => 'Get Block',
             'steps'       => 'Steps Block',
+            'plan'        => 'Plan Block',
+            'slider'      => 'Slider Block',
+            'speakers'    => 'Speakers Block',
             '404'         => '404 page'
         );
 
