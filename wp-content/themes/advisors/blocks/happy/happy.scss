@@ -47,15 +47,18 @@
       justify-content: center;
       align-items: baseline;
       padding-bottom: 40px;
+      padding-top: 40px;
+
 
       .brands_inner {
         width: 180px;
-        @include media768{
+        @include media768 {
           width: 47%;
           margin-bottom: 15px;
         }
       }
-      @include media768{
+
+      @include media768 {
         padding-left: 0;
         gap: 8px;
 
@@ -64,4 +67,18 @@
   }
 
 
+}
+
+.ms-carousel-force-height .slides > li.ms-image img {
+  height: fit-content !important;
+  width: auto;
+  object-fit: scale-down !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+.metaslider .slides img {
+  width: 100%;
+  display: block;
+  object-fit: scale-down;
 }

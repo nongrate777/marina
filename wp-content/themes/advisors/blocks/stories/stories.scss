@@ -1,0 +1,95 @@
+.stories {
+  padding: 80px 0;
+  background: #131e34;
+
+  a {
+    text-decoration: none;
+  }
+
+  &__filter {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  &__btn {
+    padding: 10px 34px;
+    border: none;
+    border-radius: 6px;
+    font: 700 15px/1 "Inter", sans-serif;
+    color: #fff;
+    background: #c6c9e3;
+    cursor: pointer;
+    transition: background .25s;
+
+    &.is-active {
+      background: #bb4cff;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 32px;
+
+    &.is-single { // если осталась одна карточка
+      grid-template-columns: repeat(2, minmax(340px, 1fr));
+    }
+  }
+
+  &__item {
+    display: block;
+  }
+
+  &__card {
+    border: 3px solid #07dbff;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #182241;
+    min-height: 390px;
+  }
+
+  &__img {
+    background: #017d9e;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    text-align: center;
+
+    img {
+      max-width: max-content;
+      height: auto;
+      max-height: 200px;
+    }
+  }
+
+  &__content {
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: #fff;
+  }
+
+  &__desc {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin: 0 0 auto;
+  }
+
+  &__cat {
+    margin-top: 22px;
+    font-size: 14px;
+    color: rgba(157, 77, 255, 1);
+  }
+
+  @media (max-width: 479px) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

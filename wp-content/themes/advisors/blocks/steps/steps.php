@@ -10,7 +10,7 @@ $fields_link   = isset( $fields['button_links'] )    ? $fields['button_links']  
 ?>
 <section class="steps">
     <div class="container">
-        <div class="steps__main">
+        <div class="steps__main" id="steps">
             <?php
             /**
              * Headline

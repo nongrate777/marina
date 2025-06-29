@@ -21,15 +21,11 @@ $fields_link   = isset( $fields['button_links'] )    ? $fields['button_links']  
             /**
              * Options
              */
-            if (!empty($fields_brands)) { ?>
-            <ul class="happy__main-brands">
-                <?php foreach ($fields_brands as $brand) { ?>
-                    <li class="brands_inner">
-                        <img src="<?php echo wp_kses_post($brand['brand']['url']); ?>" alt="<?php echo wp_kses_post($brand['brand']['alt']); ?>" >
-                    </li>
-                <?php } ?>
-            </ul>
-            <?php }
+            ?>
+            <div class="happy__main-brands">
+                <?php echo do_shortcode('[metaslider id="1031"]'); ?>
+            </div>
+            <?php
             /**
              * Button
              */

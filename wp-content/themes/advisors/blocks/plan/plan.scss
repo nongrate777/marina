@@ -68,6 +68,9 @@
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25),
         0 0 40px rgba(128, 128, 128, 0.4);
 
+        .block_inner-bottom {
+          line-height: 1.7;
+        }
 
         .block_inner-title {
           font-weight: 600;
@@ -135,12 +138,14 @@
   margin-top: 46px;
   font-size: 17px;
 }
-.plan__main-blocks-all{
+
+.plan__main-blocks-all {
   margin-top: 16px;
 }
+
 .plan__main-blocks-all:nth-child(2) {
   margin-right: 330px;
-  @include media768{
+  @include media768 {
     margin-right: 0;
   }
 }

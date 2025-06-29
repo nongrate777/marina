@@ -77,7 +77,7 @@ $fields_speaker = isset($fields['speaker']) ? $fields['speaker'] : [];
                                 <?php echo wp_kses_post($block['position']); ?>
                             </div>
                             <div class="block_inner-social">
-                                <a href="#"><?php echo wp_kses_post($block['social']); ?></a>
+                                <a href="<?php echo wp_kses_post($block['link']); ?>" target="_blank"><?php echo wp_kses_post($block['social']); ?></a>
                             </div>
                             <img loading="lazy"
                                  src="<?php echo wp_kses_post($block['photo']['url']); ?>"

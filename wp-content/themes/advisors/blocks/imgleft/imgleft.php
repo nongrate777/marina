@@ -61,7 +61,7 @@ $fields_link   = isset( $fields['button_links'] )? $fields['button_links']: '';
                rel="noopener noreferrer"
                target="_blank"
                tabindex="0"
-               aria-label="<?php echo wp_kses_post($fields_button); ?>">
+               >
                 <?php echo wp_kses_post($fields_button); ?>
             </a>
         </div>

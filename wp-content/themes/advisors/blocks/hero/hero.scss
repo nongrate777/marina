@@ -1,0 +1,80 @@
+.hero {
+  background: #3C4862;
+  padding: 80px 0 50px 0;
+
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    @include media992{
+      flex-wrap: wrap;
+    }
+
+    &-podiska {
+      width: 280px;
+      display: block;
+      min-width: 280px;
+      @include media992 {
+        width: 100%;
+      }
+
+      h2.subscribe-form__title {
+        font-weight: 700;
+        font-size: 25px;
+        color: rgba(157, 77, 255, 1);
+        margin-bottom: 20px;
+        @include media992{
+          margin-top: 20px;
+        }
+      }
+
+      input {
+        width: 280px;
+        border: 3px solid rgba(168, 179, 207, 1);
+        border-radius: 12px;
+        background-color: #3C4862;
+        color: $white;
+        min-height: 53px;
+        margin-bottom: 24px;
+        padding: 0 8px;
+        &::placeholder {
+          color: $white;
+          font-size: 17px;
+          font-weight: 700;
+
+        }
+        @include media992 {
+          width: 100%;
+        }
+      }
+    }
+
+    &-left {
+      max-width: 263px;
+      @include media992 {
+        max-width: 100%;
+      }
+    }
+
+    h1 {
+      color: #9D4DFF;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    &-right-text {
+      color: $white;
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 400;
+
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: #00C7FF;
+      }
+    }
+  }
+}

@@ -172,11 +172,7 @@ $advisor_profile = isset($fields['advisor_profile']) ? $fields['advisor_profile'
             /**
              * Soclinks
              */
-            if (!empty($instagram)) { ?>
-                <div class="footer__social-link">
-                    <a href="<?php echo wp_kses_post($instagram); ?>"><img src="data:image/svg+xml,%3Csvg width='23' height='22' viewBox='0 0 23 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.4801 22.0098H4.18008C2.20008 22.0098 0.590088 20.3801 0.590088 18.3701V3.87988C0.590088 1.87988 2.20008 0.240234 4.18008 0.240234H18.4801C20.4601 0.240234 22.0701 1.86988 22.0701 3.87988V18.3701C22.0701 20.3801 20.4601 22.0098 18.4801 22.0098ZM4.18008 1.4502C2.85008 1.4502 1.77008 2.5499 1.77008 3.8999V18.3901C1.77008 19.7401 2.85008 20.8398 4.18008 20.8398H18.4801C19.8101 20.8398 20.8901 19.7401 20.8901 18.3901V3.8999C20.8901 2.5499 19.8101 1.4502 18.4801 1.4502H4.18008Z' fill='white'/%3E%3Cpath d='M11.33 16.7202C9.86005 16.7202 8.47005 16.1401 7.43005 15.0801C6.39005 14.0301 5.82007 12.6199 5.82007 11.1299C5.82007 9.63988 6.39005 8.24018 7.43005 7.18018C8.47005 6.13018 9.85005 5.54004 11.33 5.54004C12.81 5.54004 14.1901 6.12018 15.2301 7.18018C16.2701 8.23018 16.8401 9.63988 16.8401 11.1299C16.8401 12.6199 16.2701 14.0201 15.2301 15.0801C14.1901 16.1401 12.8 16.7202 11.33 16.7202ZM11.33 6.74023C8.94005 6.74023 6.99005 8.70988 6.99005 11.1299C6.99005 13.5499 8.93005 15.52 11.33 15.52C13.72 15.52 15.6701 13.5499 15.6701 11.1299C15.6701 8.70988 13.72 6.74023 11.33 6.74023Z' fill='white'/%3E%3Cpath d='M18.33 4.68018C18.9154 4.68018 19.39 4.20081 19.39 3.60986C19.39 3.01892 18.9154 2.54004 18.33 2.54004C17.7446 2.54004 17.27 3.01892 17.27 3.60986C17.27 4.20081 17.7446 4.68018 18.33 4.68018Z' fill='white'/%3E%3C/svg%3E%0A"></a>
-                </div>
-            <?php }
+
             if (!empty($youtube)) { ?>
                 <div class="footer__social-link">
                     <a href="<?php echo wp_kses_post($youtube); ?>"><img src="data:image/svg+xml,%3Csvg width='29' height='21' viewBox='0 0 29 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.1002 0.350098H4.87021C2.30021 0.350098 0.220215 2.73016 0.220215 5.66016V15.1602C0.220215 18.0902 2.30021 20.4702 4.87021 20.4702H24.1002C26.6702 20.4702 28.7502 18.0902 28.7502 15.1602V5.66016C28.7502 2.72016 26.6702 0.350098 24.1002 0.350098ZM11.5202 15.29V5.52979L19.8702 10.4102L11.5202 15.29Z' fill='white'/%3E%3C/svg%3E%0A"></a>
@@ -207,6 +203,44 @@ $advisor_profile = isset($fields['advisor_profile']) ? $fields['advisor_profile'
             title.addEventListener('click', function () {
                 submenu.classList.toggle('open');
             });
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const quiz   = document.querySelector('.sm-quiz');
+        if (!quiz) return;
+
+        const steps  = quiz.querySelectorAll('.sm-step');
+        const dots   = quiz.querySelectorAll('.sm-quiz__dot');
+        let   index  = 0;
+
+        function show(i){
+            /* помечаем пройденный */
+            dots[index].classList.remove('is-current');
+            dots[index].classList.add('is-done');
+            steps[index].classList.remove('is-active');
+
+            /* показываем новый */
+            index = i;
+            dots[index].classList.add('is-current');
+            steps[index].classList.add('is-active');
+
+            window.scrollTo({top: quiz.offsetTop - 40, behavior: 'smooth'});
+        }
+
+        quiz.addEventListener('click', e => {
+            if (e.target.classList.contains('sm-next')) {
+                e.preventDefault();
+                if (index < steps.length - 1) show(index + 1);
+            }
+        });
+
+        /* CF7 – финальный экран */
+        document.addEventListener('wpcf7mailsent', ev => {
+            if (!quiz.contains(ev.target)) return;
+            quiz.querySelectorAll('fieldset, .sm-quiz__progress').forEach(el => el.style.display='none');
+            quiz.querySelector('.sm-thanks').style.display = 'block';
         });
     });
 </script>

@@ -5,7 +5,7 @@ Tags: multilingual, translate, translation, language, localization
 Requires at least: 6.2
 Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 3.7
+Stable tag: 3.7.3
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -59,8 +59,6 @@ Helps optimizing the time spent translating your site with some very useful extr
 * Ability to use the WooCommerce REST API (available with Polylang Pro).
 * **Access to a Premium Support for personalized assistance.**
 
-Neither of them will allow to do automated translation.
-
 = Our other free plugins =
 
 * [WPML to Polylang](https://wordpress.org/plugins/wpml-to-polylang/) allows migrating from WPML to Polylang.
@@ -104,6 +102,38 @@ Wherever third party code has been used, credit has been given in the code’s c
 
 == Changelog ==
 
+= 3.7.3 (2025-06-16) =
+
+* Pro: Always display ACF translation settings for field groups formerly translated in versions older than 3.7
+* Pro: Fix translation displayed in child fields of ACF layout fields when they should not
+* Pro: Fix translation of the ACF field "Choice" when the translation is set to "Copy once" or "Synchronize"
+* Pro: Fix a PHP warning when translating some blocks
+* Pro: Fix impossibility to change the language of an empty post in the block editor
+* Fix duplicate values in options #1672
+* Fix JS error in media library (grid view) #1674
+* Fix language dropdown not present in the media modal accessible from the media library grid view #1675
+* Fix DB error introduce by WooCommerce 9.9 #1681
+
+= 3.7.2 (2025-05-27) =
+
+* Pro: Require ACF 6.0+ to activate the integration to avoid fatal errors with older versions
+* Pro: Add a new ACF field group setting to decide if translations instructions must be displayed
+* Pro: Fix a fatal error when using ACF blocks with ACF < 6.3.0
+* Pro: Fix regression preventing to translate Oembed, URL and Email ACF fields
+* Pro: Fix ACF fields not translated when they have a default value
+* Pro: Fix empty ACF fields values not copied when the field has a default value
+* Pro: Fix ACF field default values not translated when copying a post
+* Pro: Fix possible fatal error if invalid types of data are sent for machine translation
+* Pro: Fix term meta removed when a term is machine translated
+* Fix nav menu locations not saved if invalid data are stored in database #1659
+* Fix parent relationship removed when a new translated term is created without parent #1671
+
+= 3.7.1 (2025-05-05) =
+
+* Pro: Do not display ACF fields translations settings when language location is set.
+* Pro: Fix ACF taxonomy field terms not synchronized when "Save Terms" and "load terms" settings are activated.
+* Pro: Fix duplicate options when using numeric keys for ACF choice fields.
+
 = 3.7 (2025-04-22) =
 
 * Requires PHP 7.2 as minimum version
@@ -140,78 +170,5 @@ Wherever third party code has been used, credit has been given in the code’s c
 * Fix sanitization of translated options that may impact other strings #1571
 * Fix home link block not translated #1647
 * Fix a conflict with WooCommerce Price Based on Country #1638
-
-= 3.6.7 (2025-03-11) =
-
-* Pro: Security : Fix private content disclosure.
-* Fix links wrongly removed in notices #1627
-* Fix all categories assigned when the default category is missing #1617
-
-= 3.6.6 (2025-01-13) =
-
-* Pro: Fix character encoding in the autocomplete field in the block editor languages panel
-* Pro: Fix navigation language switcher block allowing a dropdown to hide the current language
-* Pro: Fix translation of Media and text block when the media is shown on right
-* Pro: Fix translation of the Cover block when fixed background is enabled
-* Fix redirect of translated attachment page when attachment pages are disabled #1605
-
-= 3.6.5 (2024-11-05) =
-
-* Add compatibility with WP 6.7
-* Pro: Prevent infinite loop when the locale fallbacks reference each other
-* Pro: Set canResegment attribute to no in XLIFF files
-* Fix empty notice displayed if the plugin upgrade notice is set but empty
-
-= 3.6.4 (2024-07-29) =
-
-* Pro: Fix infinite loop with WP 6.6 when the locale fallbacks include the main locale of a language
-* Pro: Prevent saving the main locale among the locale fallbacks of a language
-* Pro: Hide the characters consumption graph when the DeepL cost control is deactivated
-* Add Yoast SEO social title and social description to the strings translations
-* Fix incorrect page on front and page for posts translations when the option is saved with admin language filter active
-
-= 3.6.3 (2024-06-18) =
-
-* Pro: Fix locale fallback for translations loaded just in time (requires WP 6.6)
-* Allow to pass an array as context to icl_register_string() #1497
-* Fix admin bar search menu in WP 6.6 #1496
-* Fix a regression in the usage of the filter pll_flag #1489
-
-= 3.6.2 (2024-06-03) =
-
-* Pro: Fix XLIFF files not correctly imported when exported from older version than 3.6
-* Pro: Fix translated categories not assigned to translated post when using machine translation
-* Pro: Fix 'lang' param not applied for secondary queries during a REST request
-* Pro: Fix newlines for content edited in classic editor and translated with DeepL
-* Pro: Fix a conflict with the Stream plugin on multisite
-
-= 3.6.1 (2024-04-09) =
-
-* Pro: Fix ACF fields not shown after a post was translated with DeepL
-* Remove rewrite when registering the language taxonomy #1457
-* Fix search block not filtered when displayed as button only #1459
-* Fix current language not kept when using switch_to_blog() in multisite #1458
-
-= 3.6 (2024-03-18) =
-
-* Requires WP 6.2 as minimum version
-* Add compatibility with WP 6.5
-* Pro: Add DeepL machine translation for posts
-* Pro: Add export and import in XLIFF 2.0/2.1 formats
-* Pro: Improve translator comments in exported PO files
-* Pro: Allow to export JSON encoded post and term metas in XLIFF files
-* Pro: Allow to export block sub-attributes in XLIFF files
-* Pro: Add footer notes block to XLIFF files
-* Pro: Single files are now exported directly instead of inside a zip
-* Pro: Reworked the language switcher navigation block
-* Pro: Fix language switcher navigation block justification not aligned with core settings in overlay menu (requires WP 6.5)
-* Pro: Fix a race condition which could lead to display a notice to the wrong user
-* Pro: Fix a conflict with ACF when rewrite rules are flushed with WP-CLI on a multisite
-* Pro: Fix import of several metas with same sources but different translations
-* Add filter `pll_cookie_args` to filter the Polylang cookie arguments #1406
-* Fix wrong translated post types and taxononies after a `switch_to_blog()` #1415
-* Fix a minor performance issue for the page for posts #1412
-* Fix a JS errors after quick edit. Props @mcguffin #1435, #1444
-* Fix a possible warning in view-translations-post.php #1439
 
 See [changelog.txt](https://plugins.svn.wordpress.org/polylang/trunk/changelog.txt) for older changelog

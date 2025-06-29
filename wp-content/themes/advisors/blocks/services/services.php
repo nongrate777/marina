@@ -13,7 +13,7 @@ $fields_link = isset($fields['button_link']) ? $fields['button_link'] : '';
 $fields_image = isset($fields['image']) ? $fields['image'] : '';
 $fields_block = isset($fields['block']) ? $fields['block'] : '';
 ?>
-<section class="services">
+<section class="services" id="leads">
     <?php
     /**
      * Headline

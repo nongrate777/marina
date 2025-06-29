@@ -70,6 +70,10 @@
         img {
           width: 130px;
           height: fit-content;
+          @include media992{
+            width: 130px;
+            height: 130px;
+          }
         }
 
         .block_inner-text {

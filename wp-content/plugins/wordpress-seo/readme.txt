@@ -1,11 +1,11 @@
-=== Yoast SEO ===
+=== Yoast SEO - Advanced SEO with real-time guidance and built-in AI ===
 Contributors: yoast, joostdevalk, tdevalk
 Donate link: https://yoa.st/1up
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Tags: SEO, XML sitemap, Content analysis, Readability, Schema
 Tested up to: 6.8
-Stable tag: 25.0
+Stable tag: 25.3.1
 Requires PHP: 7.4
 
 Improve your WordPress SEO: Write better content and have a fully optimized WordPress site using the Yoast SEO plugin.
@@ -274,47 +274,41 @@ Your question has most likely been answered on our help center: [yoast.com/help/
 
 == Changelog ==
 
-= 25.0 =
+= 25.3.1 =
 
-Release date: 2025-04-29
+Release date: 2025-06-18
 
-Yoast SEO 25.0 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+This is a maintenance release which is required to align with changes to Yoast SEO Premium 25.3.1.
 
-#### Enhancements
+= 25.3 =
 
-* Optimizes the `wp yoast cleanup` CLI command  `update_indexables_author_to_reassigned` step, which can become very slow for very large data sets. Props to [eddiesshop](https://github.com/eddiesshop).
-* Improves the feedback texts for the _passive voice_ and _consecutive sentences_ assessments in case there is nothing to report.
-* Makes the _images_, _internal links_, and _external links_ assessments available when no content has been added.
+Release date: 2025-06-10
 
-#### Other
-
-* Drops compatibility with PHP 7.2 and 7.3.
-* Improves the translatability of feedback strings for the keyphrase length assessment.
-
-= 24.9 =
-
-Release date: 2025-04-15
-
-Yoast SEO 24.9 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+*New:* Yoast SEO 25.3 introduces llms.txt support to help AI tools understand your site better. [Read the full release post here!](https://yoa.st/release-10-6-25)
 
 #### Enhancements
 
-* Changes the applicability criteria of readability assessments so that they are shown even if there is little or no text.
-* Improves the recognition of transition words for Farsi.
-* Introduces more robust HTML processing and highlighting for the _consecutive sentences_ assessment.
+* Introduces the llms.txt feature, which gives site owners the opportunity to automatically generate an llms.txt file. This file helps LLMs to better understand the site's content.
+
+= 25.2 =
+
+Release date: 2025-05-27
+
+Yoast SEO 25.2 brings more enhancements and bugfixes. [Find more information about our software releases and updates here](https://yoa.st/releases).
+
+#### Enhancements
+
+* Makes the _keyphrase in image alt attributes_ assessment  available when no content has been added.
+* Renames _image keyphrase_ assessment to _keyphrase in image alt attributes_ assessment.
 
 #### Bugfixes
 
-* Fixes a bug where long sentences would be incorrectly highlighted in _sentence length_ assessment in the default editor when they were part of a block that contained non-breaking spaces or closing tags (`>`).
-* Fixes a bug where the advanced replacement variables would not be visible when editing social previews in Elementor.
-* Fixes a bug where the content image would not show on social previews when editing it in Elementor.
-* Fixes a bug where Yoast modals would not be visible when using Astra plugins.
+* Fixes a bug in the retrieval of post categories titles where a non-existent term might be referenced. Props to [@bor0](https://github.com/bor0).
+* Fixes a bug where the Yoast introduction in the Elementor editor would not be positioned correctly when on Elementor version 3.30.0.
 
 #### Other
 
-* Adds a space before the closing slash in self-closing HTML tags to comply with recommended coding standards. Props to [laxman1192](https://github.com/laxman1192).
-* Sets the _WordPress tested up to_ version to 6.8.
-* Updates the Google AI bot name in the _crawl optimization_ settings from _Google Bard_ to _Google Gemini_.
+* Excludes gallery, embed and playlist shortcodes from the _keyphrase in introduction_ analysis in Classic editor.
 
 = Earlier versions =
 For the changelog of earlier versions, please refer to [the changelog on yoast.com](https://yoa.st/yoast-seo-changelog).

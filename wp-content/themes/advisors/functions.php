@@ -21,7 +21,7 @@ include_once 'classes/Security.php';
 include_once 'classes/Ajax_Search.php';
 /**
  * Messages
- */
+
 include_once 'classes/Send_message.php';
 /**
  * Sanitize

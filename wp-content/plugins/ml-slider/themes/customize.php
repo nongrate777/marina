@@ -12,6 +12,8 @@
  *          '[ms_id] .ipsum { color: [ms_value]; border-color: [ms_value] }', 
  *      )
  *      'css' => '[ms_id] .lorem { color: [ms_value] }'
+ * 
+ * 'slideshow_edit' => false // We don't show this setting / fields in the slideshow edit page
  */
 return array(
     array(
@@ -41,7 +43,7 @@ return array(
                 ),
             ),
             array(
-                'label' => esc_html__('Icon colors', 'ml-slider'),
+                'label' => esc_html__('Icon Colors', 'ml-slider'),
                 'type' => 'fields', // Fields added through 'fields' array
                 'fields' => array(
                     array(
@@ -65,10 +67,10 @@ return array(
                 'name' => 'play_button_border_radius',
                 'type' => 'range',
                 'default' => 50,
-                'metric' => '%',
+                'metric' => 'px',
                 'min' => 0,
                 'max' => 50,
-                'css' => '[ms_id] .flexslider .flex-pauseplay a { border-radius: [ms_value]% }'
+                'css' => '[ms_id] .flexslider .flex-pauseplay a { border-radius: [ms_value]px }'
             ),
             array(
                 'label' => esc_html__('Opacity (default)', 'ml-slider'),

@@ -82,12 +82,12 @@
   &__search {
     border-radius: 14px;
     max-width: 600px;
-    width: 522px;
+    width: 600px;
     display: flex;
     align-items: center;
 
     .banner__video {
-      width: 522px;
+      width: 600px;
       @include media992 {
         max-width: 100%;
         width: 100%;

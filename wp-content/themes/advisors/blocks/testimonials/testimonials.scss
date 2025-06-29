@@ -1,0 +1,178 @@
+.testimonials {
+  background: rgba(30, 42, 67, 1);
+  padding: 40px 0;
+  line-height: 1.5;
+
+  &__description {
+    color: #ddd;
+    margin-bottom: 20px;
+  }
+
+  &__subdesc {
+    color: rgba(0, 199, 255, 1);
+    margin-bottom: 30px;
+  }
+
+  &__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    @include media992 {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__card {
+    background: #2e3b5a;
+    border-radius: 12px;
+    padding: 0 0 40px 0;
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+
+    @include media992 {
+      flex: 1 1 100%;
+    }
+
+    & + & {
+      /* Необязательно, так как gap уже задан */
+    }
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #9d4dff;
+    margin-bottom: 8px;
+    padding: 0 20px;
+  }
+
+  &__position {
+    font-size: 14px;
+    color: rgba(0, 199, 255, 1);
+    margin-bottom: 12px;
+    padding: 0 20px;
+  }
+
+  &__photo {
+    position: relative;
+    margin-bottom: 12px;
+
+    &-image {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+
+    &-link {
+      display: block;
+      position: relative;
+    }
+
+    .testimonials__play-icon {
+      position: absolute;
+      top: 20%;
+      right: 0;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 94px;
+      height: 66px;
+      color: rgba(255, 255, 255, 0.9);
+      pointer-events: none;
+      background: url("data:image/svg+xml,%3Csvg width='94' height='66' viewBox='0 0 94 66' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78.76 0.350098H15.98C7.59004 0.350098 0.790039 8.10993 0.790039 17.6799V48.6799C0.790039 58.2499 7.59004 66.01 15.98 66.01H78.76C87.15 66.01 93.95 58.2499 93.95 48.6799V17.6799C93.95 8.11993 87.15 0.350098 78.76 0.350098ZM37.69 49.1201V17.25L64.93 33.1899L37.69 49.1201Z' fill='white'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    color: #eee;
+    line-height: 1.6;
+    padding: 0 20px;
+  }
+}
+.form-submit{
+  background-color: #121c30;
+  padding: 80px 0;
+  .sm-demo-box{
+    background: #121c30;
+    border: 3px solid #07dbff;
+    border-radius: 12px;
+    padding: 36px 82px 4px;
+    max-width: 100%;
+    margin: 0 auto 40px;
+    color: $white;
+    font-family:"Inter",sans-serif;
+  }
+  .sm-demo-title{
+    margin:0 0 32px;
+    font-size:28px;
+    font-weight:700;
+    text-align:center;
+    color:#a146ff; /* фиолетовый */
+  }
+  /* ===== Grid layout ===== */
+  .sm-demo-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    grid-gap:28px 40px;
+  }
+  .sm-demo-col input{
+    width:100%;
+    padding:4px 0 8px;
+    background:transparent;
+    border:none;
+    border-bottom:2px solid #07dbff;
+    color:#fff;
+    font-size:16px;
+    transition:border-color .25s;
+  }
+  .sm-demo-col input::placeholder{
+    color:#8c9bb5;
+  }
+  .sm-demo-col input:focus{
+    outline:none;
+    border-bottom-color:#a146ff;
+  }
+
+  /* ===== Submit button ===== */
+  .sm-demo-submit{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 34px;
+  }
+  .sm-demo-btn{
+    width:100%;
+    padding:12px 0;
+    background:#a146ff;
+    border:none;
+    border-radius:6px;
+    color:#fff;
+    font-weight:700;
+    font-size:16px;
+    cursor:pointer;
+    transition:background .25s;
+  }
+  .sm-demo-btn:hover,
+  .sm-demo-btn:focus{
+    background:#c56dff;
+    outline:none;
+  }
+
+  /* ===== Disclaimer text ===== */
+  .sm-demo-note{
+    margin:24px 0 0;
+    font-size:13px;
+    line-height:1.4;
+    color:#9aa7c3;
+  }
+  .sm-demo-note a{
+    color:#a146ff;
+    text-decoration:none;
+  }
+  @media (max-width:479px){
+    .sm-demo-box{padding:28px 20px}
+    .sm-demo-title{font-size:22px; line-height: 1.5}
+  }
+}

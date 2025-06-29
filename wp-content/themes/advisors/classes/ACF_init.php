@@ -74,6 +74,12 @@ class ACF_init
             'plan'        => 'Plan Block',
             'slider'      => 'Slider Block',
             'speakers'    => 'Speakers Block',
+            'hero'        => 'Hero Block',
+            'blog'        => 'Blog Posts',
+            'testimonials'=> 'Testimonials Page',
+            'stories'     => 'Stories Page',
+            'soc'         => 'Soclinks Block',
+            'top'         => 'Top Block',
             '404'         => '404 page'
         );
 

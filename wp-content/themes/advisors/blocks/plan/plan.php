@@ -9,7 +9,7 @@ $fields_plan = isset($fields['plan']) ? $fields['plan'] : [];
 ?>
 <section class="plan">
     <div class="container">
-        <div class="plan__main">
+        <div class="plan__main"  id="plan">
             <?php
             /**
              * Headline
